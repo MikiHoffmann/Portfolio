@@ -1,0 +1,104 @@
+/*
+MENUBUTTON HTML:
+    <div id="menuButton">
+       <div id="topBeam"></div>
+       <div id="middleBeam"></div>
+       <div id="bottomBeam"></div>
+   </div>
+MENU OVERLAY HTML:
+    <div id="menuOverlay" class="menuOverlayClose">
+       <div id="menuOverlayContent">
+           --- additional content/ links ---
+       </div>
+   </div>
+*/
+:root {
+    --beamclr: gray; /* color of menu beams */
+    --closeclr: blue; /* color when close menu */
+    --overlayclr: green; /* menu overlay color */
+}
+/* MENUBUTTON */
+#menuButton {
+    position: fixed;
+    top: .5rem;
+    left: .5rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    background-color: blue;
+    cursor: pointer;
+    z-index: 2000;
+}
+.topBeam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--beamclr);
+    transition: .8s;
+}
+.middleBeam {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--beamclr);
+    transition: .8s;
+}
+.bottomBeam {
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--beamclr);
+    transition: .8s;
+}
+.topBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(-45deg);
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--closeclr);
+    transition: .8s;
+}
+.middleBeamClose {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: 0;
+    width: 3.125em;
+    background-color: transparent;
+    transition: .8s;
+}
+.bottomBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(45deg);
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--closeclr);
+    transition: .8s;
+}
+.menuOverlayClose {
+    position: fixed;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    transition: .8s;
+    z-index: 1999;
+}
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlayclr);
+    overflow: hidden;
+    transition: .8s;
+    z-index: 1999;
+}

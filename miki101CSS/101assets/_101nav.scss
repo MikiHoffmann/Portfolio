@@ -1,0 +1,116 @@
+/* NAV MOBILE */ 
+#navMobile {
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    @media only screen and (min-width: 30.6rem) {
+        display: none;
+    }
+}
+/* MENUBUTTON */
+#menuButton {
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    height: 3.125rem;
+    width: 3.125rem;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2000;
+}
+.beam {
+    background-color: $beamClr;
+    height: .25em;
+    width: 3.125em;
+    transition: .8s;
+}
+.topBeam {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.middleBeam {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+}
+.bottomBeam {
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+}
+.topBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(-45deg);
+    height: .25em;
+    width: 3.125em;
+    background-color: $beamClose;
+    transition: .8s;
+}
+.middleBeamClose {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: 0;
+    width: 3.125em;
+    background-color: transparent;
+    transition: .8s;
+}
+.bottomBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(45deg);
+    height: .25em;
+    width: 3.125em;
+    background-color: $beamClose;
+    transition: .8s;
+}
+/* MENU OVERLAY */
+.menuOverlayClose {
+    position: fixed;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    overflow: hidden;
+    transition: .8s;
+    z-index: 1999;
+}
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $overlayClr;
+    overflow: hidden;
+    transition: .8s;
+    z-index: 1999;
+}
+#menuOverlayContent {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+/* NAV TABLET PC */ 
+#navTabletPC {
+    position: fixed;
+    top: 0;
+    display: none;
+    height: 4rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: $backclr;
+    @media only screen and (min-width: 30.6rem) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+#navTabletPC a {
+    display: inline-block;
+    font-size: 1.2rem;
+}

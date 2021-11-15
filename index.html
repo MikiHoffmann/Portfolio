@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="miki101CSS/101.css">
+    <script type="text/javascript" src="miki101JS/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="miki101JS/101menuButtonOverlay.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#menuButton').makeMenuButton('#menuButton','#topBeam','#middleBeam','#bottomBeam','#menuOverlay');
+        });
+    </script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <!-- NAVIGATION MOBILE -->
+        <div id="navMobile">
+            <div id="menuButton">
+                <div id="topBeam" class="beam"></div>
+                <div id="middleBeam" class="beam"></div>
+                <div id="bottomBeam" class="beam"></div>
+            </div>
+            <!-- MENU OVERLAY MOBILE -->
+            <div id="menuOverlay" class="menuOverlayClose">
+                <div id="menuOverlayContent">
+                    <a href="#">intro</a>
+                    <a href="#">skills</a>
+                    <a href="#">experience</a>
+                    <a href="#">bla</a>
+                </div>
+            </div>
+        </div>
+        <!-- NAVIGATION TABLET PC -->
+        <div id="navTabletPC">
+            <a href="#">intro</a>
+            <a href="#">skills</a>
+            <a href="#">experience</a>
+            <a href="#">bla</a>
+        </div>
+    </nav>
+
+    <main>
+        
+        <header>
+            <div id="mainHeader">
+                <h1>miki | designer</h1>
+            </div>
+        </header>
+
+        <article>
+            <div class="row">
+                <div class=" column sectionText">
+                    <p>
+                        Life is to be celebrated.
+                    </p>
+                    <p>
+                    Surround yourself with things that make you happy and assist you.
+                    <br>
+                    Try to enjoy every day and do what you like to do and are good at.
+                    <p>
+                    My two passions are people and good stuff.
+                    <br>
+                    Connecting to people is very important to me.
+                    </p>
+                    <p>
+                    But I also like to surround myself with nice things.
+                    <br>
+                    So design is a big part of my life.
+                    <br>
+                    I try to be unique and don't just follow...
+                    </p>
+                    <p>
+                    A couple of years ago I had to do a step back due to a meningitis infection.
+                    <br>
+                    So I decided to go back to school and learn for webdesign and combine my passions...
+                    </p>
+                    <p>
+                    My keywords for life:
+                    <br>
+                    listen | look | learn | create
+                    <br><br>
+                    &amp; be happy!
+                    </p>
+                </div>
+                <div class=" column sectionIMG">
+                    <img src="miki101IMG/IMG_20211112_151116.jpg" alt="profilePic"/>
+                </div>
+                
+            </div>   
+        </article>
+
+        <article>
+            <div class="row">
+                <div class=" column sectionList">
+                    <ul>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                    </ul>
+                </div>
+                <div class=" column sectionList">
+                    <ul>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                    </ul>
+                </div>
+                <div class=" column sectionList">
+                    <ul>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                        <li>one</li>
+                    </ul>
+                </div>
+            </div>   
+        </article>
+    </main>
+</body>
+</html>

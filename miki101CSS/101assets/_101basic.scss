@@ -10,23 +10,32 @@ html {
     scroll-behavior: smooth;
 }
 body {
-
-    background-color: $backclr;
+    background-image: url(../miki101IMG/naaimachine-huis.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $backClr;
     font-family: $mainFont;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: $mainFontClr;
 }
 main {
-    margin-top: 4rem;
-    padding: 1rem;
+    margin-top: 4.1rem;
 }
 img {
     height: auto;
     max-width: 100%;
 }
+p {
+    margin-bottom: .8rem;
+}
 a {
     text-decoration: none;
     color: $mainFontClr;
+}
+li {
+    list-style-type: none;
 }
 .row {
     display: flex;
@@ -36,16 +45,32 @@ a {
         flex-direction: row;
     }
 }
+.lightArticle {
+    margin-bottom: 4rem;
+    background-color: $backClrLight;
+    color: $darkFontClr;
+}
+.darkArticle {
+    background-color: $backClrTrans;
+}
 .column {
     flex: 1;
     padding: 1rem;
-    border: 1px solid $borderOne;
 }
 .sectionText {
     flex: 3;
+    padding: 2rem;
+    text-align: justify;
 }
 .sectionIMG {
     flex: 2;
+    img {
+        display: block;
+        height: auto;
+        width: 60%;
+        margin: 1rem auto;
+        box-shadow: 3px 3px 6px black;
+    }
 }
 .sectionList {
     flex: 1;

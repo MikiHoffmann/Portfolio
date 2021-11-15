@@ -1,9 +1,12 @@
 /* COLORS */
-$backclr: rgb(19, 8, 0);
-$mainFontClr: white;
-$borderOne: white;
-$beamClr: white;
-$beamClose: pink;
+$backClr: rgb(19, 8, 0);
+$backClrLight: rgb(255,255,255);
+$backClrTrans: rgba(19, 8, 0, 0.7);
+$mainFontClr: rgb(255,255,255);
+$darkFontClr: rgb(19, 8, 0);
+$borderOne: rgb(255,255,255);
+$beamClr: rgb(255,255,255);
+$beamClose: rgb(245, 188, 197);
 $overlayClr: grey;
 
 /* FONTS */

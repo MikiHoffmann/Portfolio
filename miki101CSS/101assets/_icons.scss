@@ -1,0 +1,38 @@
+.iconRow {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 0 2rem 0;
+    background-color: $backClrTrans;
+}
+.icon {
+    position: relative;
+    display: inline-block;
+    height: 3em;
+    width: 3em;
+    background-color: transparent;
+    border: $borderOne;
+    border-radius: 50%;
+    box-shadow: $Shdw, $ShdwIn;
+}
+.icon h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+    color: $mainFontClr;
+    font-size:xx-large;
+    text-shadow: $Shdw;
+}
+.icon img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    width: 75%;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: $Shdw, $ShdwIn;
+}

@@ -1,14 +1,17 @@
 /* COLORS */
 $backClr: rgb(19, 8, 0);
-$backClrLight: rgb(255,255,255);
+$backClrLight: rgb(245, 188, 197);
 $backClrTrans: rgba(19, 8, 0, 0.7);
 $mainFontClr: rgb(255,255,255);
 $darkFontClr: rgb(19, 8, 0);
-$borderOne: rgb(255,255,255);
+$borderOne: 3px solid rgb(255,255,255);
+$Shdw: 3px 3px 6px rgb(0,0,0);
+$ShdwWide: 15px 15px 15px rgb(0,0,0);
+$ShdwIn: inset 2px -2px 4px rgb(0,0,0);
 $beamClr: rgb(255,255,255);
 $beamClose: rgb(245, 188, 197);
 $overlayClr: grey;
 
 /* FONTS */
 $mainFont: Arial, Helvetica, sans-serif;
-$headerFont: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$headerFont: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

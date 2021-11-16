@@ -9,23 +9,28 @@
 
 html {
   height: 100%;
-  max-width: 62,5rem;
   scroll-behavior: smooth;
 }
 
 body {
-  background-image: url(../miki101IMG/naaimachine-huis.png);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
+  width: 100%;
   background-color: #130800;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   color: white;
 }
 
+.hasBackground {
+  background-image: url(../miki101IMG/naaimachine-huis.png);
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main {
+  width: 100%;
   margin-top: 4.1rem;
 }
 
@@ -35,6 +40,11 @@ img {
 }
 
 p {
+  margin-bottom: .8rem;
+}
+
+h1, h2 {
+  margin-top: .8rem;
   margin-bottom: .8rem;
 }
 
@@ -55,6 +65,9 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
 }
@@ -70,7 +83,7 @@ li {
 
 .lightArticle {
   margin-bottom: 4rem;
-  background-color: white;
+  background-color: #f5bcc5;
   color: #130800;
 }
 
@@ -78,11 +91,32 @@ li {
   background-color: rgba(19, 8, 0, 0.7);
 }
 
+.lightText {
+  color: white;
+  text-shadow: 3px 3px 6px black;
+}
+
 .column {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   padding: 1rem;
+}
+
+.columnFull {
+  width: 100%;
+}
+
+.wide {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.narrow {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 
 .sectionText {
@@ -99,11 +133,18 @@ li {
           flex: 2;
 }
 
-.sectionIMG img {
+.sectionIMG figure {
   display: block;
   height: auto;
-  width: 60%;
+  width: 90%;
   margin: 1rem auto;
+  padding: 8%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.sectionIMG figure img {
+  border-radius: 50%;
   -webkit-box-shadow: 3px 3px 6px black;
           box-shadow: 3px 3px 6px black;
 }
@@ -112,15 +153,45 @@ li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+/* NAVBAR */
+#navBar {
+  position: fixed;
+  top: 0;
+  height: 4.5rem;
+  width: 100%;
+  -webkit-box-shadow: 3px 3px 6px black;
+          box-shadow: 3px 3px 6px black;
+  z-index: 1800;
+}
+
+#navBar img {
+  position: fixed;
+  top: .5rem;
+  right: .5rem;
+  height: 3.5rem;
+  width: auto;
+  -webkit-box-shadow: 3px 3px 6px black;
+          box-shadow: 3px 3px 6px black;
+  border-radius: 50%;
+  z-index: 2000;
 }
 
 /* NAV MOBILE */
 #navMobile {
   position: fixed;
   top: 0;
-  height: 4.1rem;
+  height: 4.5rem;
   width: 100%;
   background-color: rgba(19, 8, 0, 0.7);
+  z-index: 1900;
 }
 
 @media only screen and (min-width: 30.6rem) {
@@ -132,8 +203,8 @@ li {
 /* MENUBUTTON */
 #menuButton {
   position: fixed;
-  top: .5rem;
-  right: .9rem;
+  top: .8rem;
+  left: .8rem;
   height: 3.125rem;
   width: 3.125rem;
   background-color: transparent;
@@ -145,6 +216,8 @@ li {
   background-color: white;
   height: .25em;
   width: 3.125em;
+  -webkit-box-shadow: 3px 3px 6px black;
+          box-shadow: 3px 3px 6px black;
   -webkit-transition: .8s;
   transition: .8s;
 }
@@ -185,7 +258,7 @@ li {
   top: 1.25em;
   left: 0;
   height: 0;
-  width: 3.125em;
+  width: 0;
   background-color: transparent;
   -webkit-transition: .8s;
   transition: .8s;
@@ -205,9 +278,7 @@ li {
 }
 
 /* MENU OVERLAY */
-.menuOverlayClose {
-  position: fixed;
-  top: 0;
+#menuOverlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,46 +286,47 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  justify-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#menuOverlay a {
+  width: 80%;
+  background-color: rgba(19, 8, 0, 0.7);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 11vw;
+  font-weight: bold;
+  color: #f5bcc5;
+  padding: 2%;
+  -webkit-box-shadow: 15px 15px 15px black;
+          box-shadow: 15px 15px 15px black;
+}
+
+.menuOverlayClose {
+  position: fixed;
+  top: 0;
   height: 0%;
   width: 100%;
   overflow: hidden;
   -webkit-transition: .8s;
   transition: .8s;
-  z-index: 1999;
+  z-index: 1600;
 }
 
 .menuOverlay {
   position: fixed;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
   height: 100%;
   width: 100%;
-  background-color: grey;
+  padding-top: 3rem;
   overflow: hidden;
   -webkit-transition: .8s;
   transition: .8s;
-  z-index: 1999;
-}
-
-#menuOverlayContent {
-  font-size: 2rem;
-}
-
-#menuOverlayContent a {
-  display: block;
+  z-index: 1600;
 }
 
 /* NAV TABLET PC */
@@ -262,10 +334,11 @@ li {
   position: fixed;
   top: 0;
   display: none;
-  height: 4.1rem;
+  height: 4.5rem;
   width: 100%;
   padding: 1rem;
   background-color: rgba(19, 8, 0, 0.7);
+  z-index: 1010;
 }
 
 @media only screen and (min-width: 30.6rem) {
@@ -277,9 +350,9 @@ li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -287,17 +360,23 @@ li {
   display: inline-block;
   font-size: 1.2rem;
   margin: auto .3rem;
+  -webkit-box-shadow: 3px 3px 6px black;
+          box-shadow: 3px 3px 6px black;
 }
 
 #mainHeader {
   height: auto;
   width: 100%;
-  padding: 5%;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 5vw;
+  padding: 2rem;
+  background-color: #f5bcc5;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 4.5vw;
+  color: white;
   text-align: center;
   letter-spacing: .1rem;
-  text-shadow: 15px 15px 20px black;
+  text-shadow: 3px 3px 6px black;
+  -webkit-box-shadow: inset 2px -2px 4px black;
+          box-shadow: inset 2px -2px 4px black;
 }
 
 #mainFooter {
@@ -311,5 +390,74 @@ li {
 
 .footerSection {
   text-align: center;
+}
+
+.footerSection .icon {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.footerSection .icon a {
+  font-weight: normal;
+  font-size: xx-small;
+}
+
+.footerBottom img {
+  height: auto;
+  width: 30%;
+  border-radius: 50%;
+  -webkit-box-shadow: 15px 15px 15px black;
+          box-shadow: 15px 15px 15px black;
+}
+
+.iconRow {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1rem 0 2rem 0;
+  background-color: rgba(19, 8, 0, 0.7);
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  height: 3em;
+  width: 3em;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
+          box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
+}
+
+.icon h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 0;
+  color: white;
+  font-size: xx-large;
+  text-shadow: 3px 3px 6px black;
+}
+
+.icon img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: auto;
+  width: 75%;
+  border-radius: 50%;
+  margin: auto;
+  -webkit-box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
+          box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
 }
 /*# sourceMappingURL=101.css.map */

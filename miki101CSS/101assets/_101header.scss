@@ -1,10 +1,13 @@
 #mainHeader {
     height: auto;
     width: 100%;
-    padding: 5%;
+    padding: 2rem;
+    background-color: $backClrLight;
     font-family: $headerFont;
-    font-size: 5vw;
+    font-size: 4.5vw;
+    color: $mainFontClr;
     text-align: center;
     letter-spacing: .1rem;
-    text-shadow: 15px 15px 20px black;
+    text-shadow: $Shdw;
+    box-shadow: $ShdwIn;
 }

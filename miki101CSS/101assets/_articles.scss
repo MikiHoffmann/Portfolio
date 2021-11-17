@@ -17,20 +17,12 @@
     width: 100%;
     column-gap: 1rem;
 }
-@media only screen and (min-width: 35rem) {
+@media only screen and (min-width: 30.06rem) {
     .row {
         flex-direction: row;
     }
-    .articleOne {
-        display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-        .sectionText {
-            flex: 3;
-        }
-        .sectionIMG {
-            flex: 1;
-        }
+    .imgRow {
+        justify-content: space-evenly;
     }
 }
 .column {
@@ -41,10 +33,10 @@
     width: 100%;
 }
 .wide {
-    flex: 3;
+    flex: 40%;
 }
 .narrow {
-    flex: 2;
+    flex: 30%;
 }
 .sectionText {
     padding: 2rem;
@@ -84,5 +76,4 @@
 .center {
     width: 100%;
     text-align: center;
-
 }

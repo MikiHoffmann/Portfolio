@@ -10,21 +10,22 @@
     <link rel="icon" type="image/x-icon" href="miki101IMG/mikiBlkPnk-500-round.png"/>
     <link rel="stylesheet" href="miki101CSS/101.css">
     <script type="text/javascript" src="miki101JS/jquery-3.6.0.js"></script>
-    <script type="text/javascript" src="miki101JS/101menuButtonOverlay.js"></script>
+    <script type="text/javascript" src="miki101JS/101nav.js"></script>
     <script>
         $(document).ready(function() {
-            $('#menuButton').makeMenuButton('#menuButton','#topBeam','#middleBeam','#bottomBeam','#menuOverlay');
+            $('#menuButton').makeMenuButton('#menuButton','#topBeam','#middleBeam','#bottomBeam','#menuOverlay','#menuOverlay > a');
         });
     </script>
-    
-    <title>Miki | designer</title>
+    <title>| Miki |</title>
 </head>
 <body class="hasBackground">
+
     <nav>
         <div id="navBar" class="hasBackground">
             <img src="miki101IMG/mikiBlkPnk-500-round.png" alt="miki logo"/>
             <!-- NAVIGATION MOBILE -->
             <div id="navMobile">
+                <!-- MENUBUTTON -->
                 <div id="menuButton">
                     <div id="topBeam" class="beam"></div>
                     <div id="middleBeam" class="beam"></div>
@@ -32,68 +33,70 @@
                 </div>
                 <!-- MENU OVERLAY MOBILE -->
                 <div id="menuOverlay" class="menuOverlayClose hasBackground">
-                        <a href="#">intro</a>
-                        <a href="#">skills</a>
-                        <a href="#">experience</a>
-                        <a href="#">bla</a>
+                    <a href="#mainHeader">intro</a>
+                    <a href="#contact">contact</a>
+                    <a href="#projects">projects</a>
+                    <a href="#skills">skills</a>
+                    <a href="#education">education</a>
+                    <a href="#work">work</a>
                 </div>
             </div>
             <!-- NAVIGATION TABLET PC -->
             <div id="navTabletPC">
-                <a href="#">intro</a>
-                <a href="#">skills</a>
-                <a href="#">experience</a>
-                <a href="#">bla</a>
+                <a href="#mainHeader">intro</a>
+                <a href="#contact">contact</a>
+                <a href="#projects">projects</a>
+                <a href="#skills">skills</a>
+                <a href="#education">education</a>
+                <a href="#work">work</a>
             </div>
         </div>
-        
     </nav>
 
     <main>
         
         <header>
+            <!-- MAIN HEADER -->
             <div id="mainHeader">
                 <h1>| miki |</h1>
                 <h2>people - design - more</h2>
             </div>
         </header>
-
+        <!-- FIRST ARTICLE -->
         <article class="darkArticle">
-            <div class="row">
-                <div class=" column sectionText">
-                    <p class="center">
-                        = Life is to be celebrated =
-                    </p>
+            <div class="row articleOne">
+                <div class="sectionText center">
+                    <h2>Life is to be celebrated</h2>
                     <p>
-                    Surround yourself with things that make you happy and assist you.
-                    <br>
-                    I try to be unique and don't just follow...
+                    Surround yourself with things that make you happy and assist you &amp; try to be unique and don't just follow...
                     </p>
-                </div>
-                <div class=" column sectionIMG">
-                    <figure>
-                        <img src="miki101IMG/profileMiki2.jpg" alt="profilePic"/>
-                    </figure>
-                    
-                </div>
-                <div class=" column sectionText">
                     <p>
                     A couple of years ago I had to reset my life due to a meningitis infection.
                     <br>
                     So I decided to look forward and learn new skills...
                     </p>
-                    <p>
-                    My keywords for life:
-                    <br>
-                    listen | look | learn | create
-                    <br><br>
-                    &amp; be happy!
-                    </p>
                 </div>
-            </div>   
+                
+            </div>
+                <div class="row articleOne">
+                    <div class="sectionText">
+                        <p>
+                        My keywords for life:
+                        <br>
+                        listen | look | learn | create
+                        <br><br>
+                        &amp; be happy!
+                        </p>
+                    </div>
+                    <div class="sectionIMG">
+                        <figure>
+                            <img id="profilePic" src="miki101IMG/profileMiki2.jpg" alt="profilePic"/>
+                        </figure>
+                    </div>
+                </div>   
         </article>
-
-        <article class="lightArticle lightText">
+        <!-- SECOND ARTICLE -->
+        <article id="contact" class="lightArticle lightText">
             <div class="row sectionText center">
                 <div class="columnFull">
                     <h2>contact</h2>
@@ -105,38 +108,37 @@
                     <a href="mailto:miki@miki101.nl" target="_blank">miki@miki101.nl</a>
                 </div>
             </div>
-            <div class="row iconRow">
+            <div class="row plainRow">
                 <div class="icon"><a href="https://www.facebook.com/Mikidesigns" target="_blank"><h2>f</h2></a></div>
                 <div class="icon"><a href="https://github.com/MikiHoffmann" target="_blank"><img src="miki101IMG/gitHubLogo.png" alt="github logo"/></a></div>
                 <div class="icon"><a href="https://www.linkedin.com/in/miki-hoffmann/" target="_blank"><h2>in</h2></a></div>
             </div>
         </article>
-        <article class="lightArticle">
+        <!-- THIRD ARTICLE -->
+        <article id="projects" class="darkArticle">
             <div class="row">
-                <div class=" column sectionList">
-                    <h2>CPU languages</h2>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>CSS-flex</li>
-                        <li>java-script</li>
-                        <li>jQuery</li>
-                        <li>JSON</li>
-                    </ul>
+                <div class="row darkArticle">
+                    <h2 class="sectionText center">create something...</h2>
                 </div>
-                <div class=" column sectionList">
-                    <h2>tools</h2>
-                    <ul>
-                        <li>MS office</li>
-                        <li>illustrator</li>
-                        <li>photoshop</li>
-                        <li>inkskape</li>
-                        <li>blender</li>
-                        <li>pen &amp; paper</li>
-                        <li>fabric</li>
-                    </ul>
+                <div class="sectionText">
+                    <h2>web design for café Montmartre de Paris - Amsterdam</h2>
+                    <p>
+                        check <a class="frameLink greyLink" href="https://www.cafemontmartre.nl" target="_blank">www.cafemontmartre.nl</a>
+                                <br>
+                    </p>
                 </div>
-                <div class=" column sectionList">
+                <div class="sectionText">
+
+                </div>
+            </div>
+        </article>
+        <!-- FOURTH ARTICLE -->
+        <article id="skills" class="lightArticle">
+            <div class="row">
+                <div class="row plainRow">
+                    <h2 class="sectionText center lightText ">you need some tools &amp; skills</h2>
+                </div>
+                <div class="sectionList">
                     <h2>personality</h2>
                     <ul>
                         <li>strong social skills</li>
@@ -151,7 +153,32 @@
                         <li>fashion minded</li>
                     </ul>
                 </div>
-                <div class=" column sectionList">
+                <div class="sectionList">
+                    <h2>CPU languages</h2>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>CSS-flex</li>
+                        <li>SASS</li>
+                        <li>java-script</li>
+                        <li>jQuery</li>
+                        <li>JSON</li>
+                    </ul>
+                </div>
+                <div class="sectionList">
+                    <h2>tools</h2>
+                    <ul>
+                        <li>MS office</li>
+                        <li>illustrator</li>
+                        <li>photoshop</li>
+                        <li>inkskape</li>
+                        <li>blender</li>
+                        <li>pen &amp; paper</li>
+                        <li>fabric</li>
+                        <li>sewing machine</li>
+                    </ul>
+                </div>
+                <div class="sectionList">
                     <h2>more skills</h2>
                     <ul>
                         <li>staff management</li>
@@ -160,10 +187,9 @@
                         <li>technical drawing</li>
                         <li>graphic design</li>
                         <li>pattern design (fashion)</li>
-                        <li>drivers licence B</li>
                     </ul>
                 </div>
-                <div class=" column sectionList">
+                <div class="sectionList">
                     <h2>languages</h2>
                     <ul>
                         <li>Dutch</li>
@@ -173,24 +199,12 @@
                 </div>
             </div>   
         </article>
-
-        <article class="darkArticle">
-            <div class="row">
-                <div class="sectionText">
-                    <h2>web design for café Montmartre de Paris - Amsterdam</h2>
-                    <p>
-                        check <a class="frameLink greyLink" href="https://www.cafemontmartre.nl" target="_blank">www.cafemontmartre.nl</a>
-                                <br>
-                    </p>
-                </div>
-                <div class="sectionText">
-
-                </div>
+        <!-- FIFTH ARTICLE -->
+        <article id="education">
+            <div class="row darkArticle">
+                <h2 class="sectionText center">never stop learning...</h2>
             </div>
-        </article>
-
-        <article class="lightArticle">
-            <div class="row">
+            <div class="row lightArticle">
                 <div class="sectionText">
                     <p> 
                         <strong>uCertify IT training</strong><br>
@@ -203,9 +217,12 @@
                 </div>
             </div>
         </article>
-
-        <article class="darkArticle">
+        <!-- SIXTH ARTICLE -->
+        <article id="work" class="darkArticle">
             <div class="row">
+                <div class="row darkArticle">
+                    <h2 class="sectionText center">work, work, work!</h2>
+                </div>
                 <div class="sectionText">
                     <p> 
                         <strong>bartender</strong><br>
@@ -240,7 +257,7 @@
             </div>
         </article>
     </main>
-
+    <!-- FOOTER -->
     <footer>
         <div id="mainFooter">
             <div class="footerTop">
@@ -253,7 +270,7 @@
                             <a href="mailto:miki@miki101.nl" target="_blank">miki@miki101.nl</a>
                         </div>
                     </div>
-                    <div class="row iconRow">
+                    <div class="row plainRow">
                         <div class="icon"><a href="https://www.facebook.com/Mikidesigns" target="_blank"><h2>f</h2></a></div>
                         <div class="icon"><a href="https://github.com/MikiHoffmann" target="_blank"><img src="miki101IMG/gitHubLogo.png" alt="github logo"/></a></div>
                         <div class="icon"><a href="https://www.linkedin.com/in/miki-hoffmann/" target="_blank"><h2>in</h2></a></div>

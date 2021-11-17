@@ -97,17 +97,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    text-align: center;
     a {
         width: 80%;
         background-color: $backClrTrans;
         font-family: $headerFont;
-        font-size: 11vw;
+        font-size: 10vw;
         font-weight: bold;
         color: $backClrLight;
         padding: 2%;
         box-shadow: $ShdwWide;
     }
-    
 }
 .menuOverlayClose {
     position: fixed;
@@ -146,7 +146,28 @@
 }
 #navTabletPC a {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     margin: auto .3rem;
+    padding: .3rem;
     box-shadow: $Shdw;
+    @media only screen and (min-width: 33rem) {
+        font-size: 1.2rem;
+    }
+}
+#mainHeader,
+article,
+#profilePic {
+    scroll-margin-top: 4.5rem;
+}
+/* SCROLLBAR */ 
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: $backClrTrans;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $backClrLight;
+    box-shadow: $ShdwIn;
+}
+::-webkit-scrollbar-button {
+    background-color: $backClr;
 }

@@ -1,10 +1,15 @@
 #mainFooter {
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 6rem;
     background-color: $backClrTrans;
     color: $mainFontClr;
     padding: 3rem 0;
     font-size: .9rem;
+    @media only screen and (min-width: 30.06rem) {
+        .row {
+            flex-direction: row;
+        }
+    }
 }
 .footerSection {
     text-align: center;
@@ -16,9 +21,22 @@
         }
     }
 }
+.footerBottom p{
+    margin-top: .8rem;
+}
 .footerBottom img {
     height: auto;
-    width: 30%;
+    width: 25%;
+    margin-top: 2rem;
     border-radius: 50%;
     box-shadow: $ShdwWide;
+    @media only screen and (min-width: 30.06rem) {
+        margin-top: 0;
+    }
+    @media only screen and (min-width: 40em) {
+        width: 20%;
+    }
+    @media only screen and (min-width: 48em) {
+        width: 16%;
+    }
 }

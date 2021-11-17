@@ -22,11 +22,17 @@ body {
 }
 
 .hasBackground {
-  background-image: url(../miki101IMG/naaimachine-huis.png);
+  background-image: url(../miki101IMG/naaimachine-huis-large.png);
   background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (min-width: 48rem) {
+  .hasBackground {
+    background-position: center;
+  }
 }
 
 main {
@@ -55,110 +61,6 @@ a {
 
 li {
   list-style-type: none;
-}
-
-.row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
-}
-
-@media only screen and (min-width: 30.06rem) {
-  .row {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.lightArticle {
-  margin-bottom: 4rem;
-  background-color: #f5bcc5;
-  color: #130800;
-}
-
-.darkArticle {
-  background-color: rgba(19, 8, 0, 0.7);
-}
-
-.lightText {
-  color: white;
-  text-shadow: 3px 3px 6px black;
-}
-
-.column {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 1rem;
-}
-
-.columnFull {
-  width: 100%;
-}
-
-.wide {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-}
-
-.narrow {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-.sectionText {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  padding: 2rem;
-  text-align: justify;
-}
-
-.sectionIMG {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-}
-
-.sectionIMG figure {
-  display: block;
-  height: auto;
-  width: 90%;
-  margin: 1rem auto;
-  padding: 8%;
-  border: 3px solid white;
-  border-radius: 50%;
-}
-
-.sectionIMG figure img {
-  border-radius: 50%;
-  -webkit-box-shadow: 3px 3px 6px black;
-          box-shadow: 3px 3px 6px black;
-}
-
-.sectionList {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 2rem;
-  text-align: center;
-}
-
-.center {
-  text-align: center;
 }
 
 /* NAVBAR */
@@ -292,13 +194,14 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 #menuOverlay a {
   width: 80%;
   background-color: rgba(19, 8, 0, 0.7);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 11vw;
+  font-size: 10vw;
   font-weight: bold;
   color: #f5bcc5;
   padding: 2%;
@@ -358,10 +261,39 @@ li {
 
 #navTabletPC a {
   display: inline-block;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   margin: auto .3rem;
+  padding: .3rem;
   -webkit-box-shadow: 3px 3px 6px black;
           box-shadow: 3px 3px 6px black;
+}
+
+@media only screen and (min-width: 33rem) {
+  #navTabletPC a {
+    font-size: 1.2rem;
+  }
+}
+
+#mainHeader,
+article,
+#profilePic {
+  scroll-margin-top: 4.5rem;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: rgba(19, 8, 0, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f5bcc5;
+  -webkit-box-shadow: inset 2px -2px 4px black;
+          box-shadow: inset 2px -2px 4px black;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #130800;
 }
 
 #mainHeader {
@@ -379,13 +311,175 @@ li {
           box-shadow: inset 2px -2px 4px black;
 }
 
+@media only screen and (min-width: 40rem) {
+  #mainHeader {
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  #mainHeader {
+    font-size: 3.5vw;
+  }
+}
+
+.lightArticle {
+  margin-bottom: 4rem;
+  background-color: #f5bcc5;
+  color: #130800;
+}
+
+.darkArticle {
+  background-color: rgba(19, 8, 0, 0.7);
+}
+
+.lightText {
+  color: white;
+  text-shadow: 3px 3px 6px black;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+@media only screen and (min-width: 35rem) {
+  .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .articleOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .articleOne .sectionText {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+  .articleOne .sectionIMG {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem;
+}
+
+.columnFull {
+  width: 100%;
+}
+
+.wide {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.narrow {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.sectionText {
+  padding: 2rem;
+  text-align: justify;
+}
+
+.sectionIMG figure {
+  display: block;
+  height: auto;
+  width: 75%;
+  margin: 1rem auto;
+  padding: 8%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.sectionIMG figure img {
+  border-radius: 50%;
+  -webkit-box-shadow: 3px 3px 6px black;
+          box-shadow: 3px 3px 6px black;
+}
+
+#skills .row {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.sectionList {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 30.06rem) {
+  .sectionList {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+    padding: 2rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 40rem) {
+  .sectionList {
+    -webkit-box-flex: 30%;
+        -ms-flex: 30%;
+            flex: 30%;
+    padding: 2rem 1rem;
+  }
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+}
+
 #mainFooter {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 6rem;
   background-color: rgba(19, 8, 0, 0.7);
   color: white;
   padding: 3rem 0;
   font-size: .9rem;
+}
+
+@media only screen and (min-width: 30.06rem) {
+  #mainFooter .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .footerSection {
@@ -402,15 +496,38 @@ li {
   font-size: xx-small;
 }
 
+.footerBottom p {
+  margin-top: .8rem;
+}
+
 .footerBottom img {
   height: auto;
-  width: 30%;
+  width: 25%;
+  margin-top: 2rem;
   border-radius: 50%;
   -webkit-box-shadow: 15px 15px 15px black;
           box-shadow: 15px 15px 15px black;
 }
 
-.iconRow {
+@media only screen and (min-width: 30.06rem) {
+  .footerBottom img {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 40em) {
+  .footerBottom img {
+    width: 20%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .footerBottom img {
+    width: 16%;
+  }
+}
+
+.plainRow {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;

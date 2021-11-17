@@ -1,0 +1,88 @@
+.lightArticle {
+    margin-bottom: 4rem;
+    background-color: $backClrLight;
+    color: $darkFontClr;
+}
+.darkArticle {
+    background-color: $backClrTrans;
+}
+.lightText {
+    color: $mainFontClr;
+    text-shadow: $Shdw;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 1rem;
+}
+@media only screen and (min-width: 35rem) {
+    .row {
+        flex-direction: row;
+    }
+    .articleOne {
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+        .sectionText {
+            flex: 3;
+        }
+        .sectionIMG {
+            flex: 1;
+        }
+    }
+}
+.column {
+    flex: 1;
+    padding: 1rem;
+}
+.columnFull {
+    width: 100%;
+}
+.wide {
+    flex: 3;
+}
+.narrow {
+    flex: 2;
+}
+.sectionText {
+    padding: 2rem;
+    text-align: justify;
+}
+.sectionIMG {
+    figure {
+        display: block;
+        height: auto;
+        width: 75%;
+        margin: 1rem auto;
+        padding: 8%;
+        border: $borderOne;
+        border-radius: 50%;
+        img {
+            border-radius: 50%;
+            box-shadow: $Shdw;
+        }
+    }
+}
+#skills .row {
+    justify-content: space-evenly;
+}
+.sectionList {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    @media only screen and (min-width: 30.06rem) {
+        flex: 40%;
+        padding: 2rem 1rem;
+    }
+    @media only screen and (min-width: 40rem) {
+        flex: 30%;
+        padding: 2rem 1rem;
+    }
+}
+.center {
+    width: 100%;
+    text-align: center;
+
+}

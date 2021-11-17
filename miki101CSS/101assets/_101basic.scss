@@ -17,11 +17,14 @@ body {
     color: $mainFontClr;
 }
 .hasBackground {
-    background-image: url(../miki101IMG/naaimachine-huis.png);
+    background-image: url(../miki101IMG/naaimachine-huis-large.png);
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (min-width: 48rem) {
+        background-position: center;
+    }
 }
 main {
     width: 100%;
@@ -44,69 +47,4 @@ a {
 }
 li {
     list-style-type: none;
-}
-.row {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
-    column-gap: 1rem;
-    @media only screen and (min-width: 30.06rem) {
-        flex-direction: row;
-    }
-}
-.lightArticle {
-    margin-bottom: 4rem;
-    background-color: $backClrLight;
-    color: $darkFontClr;
-}
-.darkArticle {
-    background-color: $backClrTrans;
-}
-.lightText {
-    color: $mainFontClr;
-    text-shadow: $Shdw;
-}
-.column {
-    flex: 1;
-    padding: 1rem;
-}
-.columnFull {
-    width: 100%;
-}
-.wide {
-    flex: 3;
-}
-.narrow {
-    flex: 2;
-}
-.sectionText {
-    flex: 3;
-    padding: 2rem;
-    text-align: justify;
-}
-.sectionIMG {
-    flex: 2;
-    figure {
-        display: block;
-        height: auto;
-        width: 90%;
-        margin: 1rem auto;
-        padding: 8%;
-        border: $borderOne;
-        border-radius: 50%;
-        img {
-            border-radius: 50%;
-            box-shadow: $Shdw;
-        }
-    }
-}
-.sectionList {
-    flex: 1;
-    padding: 2rem;
-    text-align: center;
-}
-.center {
-    text-align: center;
-
 }

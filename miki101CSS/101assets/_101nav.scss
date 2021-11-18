@@ -102,7 +102,7 @@
         width: 80%;
         background-color: $backClrTrans;
         font-family: $headerFont;
-        font-size: 10vw;
+        font-size: 8vw;
         font-weight: bold;
         color: $backClrLight;
         padding: 2%;
@@ -153,6 +153,18 @@
     @media only screen and (min-width: 33rem) {
         font-size: 1.2rem;
     }
+}
+/* TO TOP BUTTON */
+#toTopButton {
+    display: none;
+    position: fixed;
+    bottom: .5rem;
+    left: .5rem;
+    height: 3em;
+    width: 3rem;
+    box-shadow: $ShdwWide;
+    z-index: 1600;
+    cursor: pointer;
 }
 #mainHeader,
 article,

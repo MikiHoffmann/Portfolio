@@ -10,10 +10,14 @@
     <link rel="icon" type="image/x-icon" href="miki101IMG/mikiBlkPnk-500-round.png"/>
     <link rel="stylesheet" href="miki101CSS/101.css">
     <script type="text/javascript" src="miki101JS/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="miki101JS/jquery.cycle.all.js"></script>
     <script type="text/javascript" src="miki101JS/101nav.js"></script>
     <script>
         $(document).ready(function() {
             $('#menuButton').makeMenuButton('#menuButton','#topBeam','#middleBeam','#bottomBeam','#menuOverlay','#menuOverlay > a');
+            $('#toTopButton').makeToTopButton('#toTopButton');
+            $('#iFrameContainer').makeIFrame('.frameLink','#iFrameContainer','#iFrameClose');
+            setImages();
         });
     </script>
     <title>| Miki |</title>
@@ -51,6 +55,10 @@
                 <a href="#work">work</a>
             </div>
         </div>
+        <!-- TO TOP BUTTON -->
+        <div id="toTopButton" class="lightArticle plainRow">
+            <img src="miki101IMG/arrow-up-48px.png" alt="arrow"/>
+        </div>
     </nav>
 
     <main>
@@ -64,8 +72,8 @@
         </header>
         <!-- FIRST ARTICLE -->
         <article class="darkArticle">
-            <div class="columnFull sectionText center">
-                <h2>Life is to be celebrated</h2>
+            <div class="title">
+                <h3>Life is to be celebrated</h3>
             </div>
             <div class="sectionText center">
                 <p>
@@ -77,8 +85,7 @@
                 So I decided to look forward and learn new skills...
                 </p>
             </div>
-            <div class="row imgRow">
-                <div class="column sectionText">
+            <div class="sectionText center">
                     <p>
                     My keywords for life:
                     <br>
@@ -86,9 +93,10 @@
                     <br><br>
                     &amp; be happy!
                     </p>
-                </div>
-                <div class="column sectionIMG">
-                    <figure>
+            </div>
+            <div class="row">
+                <div class="columnNarrow sectionIMG">
+                    <figure class="plainRow lightArticle">
                         <img id="profilePic" src="miki101IMG/profileMiki2.jpg" alt="profilePic"/>
                     </figure>
                 </div>
@@ -96,49 +104,92 @@
         </article>
         <!-- SECOND ARTICLE -->
         <article id="contact" class="lightArticle lightText">
+            <div class="title">
+                <h3>contact</h3>
+            </div>
             <div class="row sectionText center">
-                <div class="columnFull">
-                    <h2>contact</h2>
+                <div class="column">
+                    <p>
+                        <a href="https://api.whatsapp.com/send?phone=+310612273368" target="_blank">06 122 733 68</a>
+                    </p>
+                    
                 </div>
                 <div class="column">
-                    <a href="https://api.whatsapp.com/send?phone=+310612273368" target="_blank">06 122 733 68</a>
-                </div>
-                <div class="column">
-                    <a href="mailto:miki@miki101.nl" target="_blank">miki@miki101.nl</a>
+                    <p>
+                        <a href="mailto:miki@miki101.nl" target="_blank">miki@miki101.nl</a>
+                    </p>
+                    
                 </div>
             </div>
-            <div class="row plainRow">
+            <div class="row plainRow sectionText">
                 <div class="icon"><a href="https://www.facebook.com/Mikidesigns" target="_blank"><h2>f</h2></a></div>
                 <div class="icon"><a href="https://github.com/MikiHoffmann" target="_blank"><img src="miki101IMG/gitHubLogo.png" alt="github logo"/></a></div>
                 <div class="icon"><a href="https://www.linkedin.com/in/miki-hoffmann/" target="_blank"><h2>in</h2></a></div>
             </div>
         </article>
         <!-- THIRD ARTICLE -->
-        <article id="projects" class="darkArticle">
+        <article id="projects" class="darkArticle largeTopMargin">
+            <div class="title darkArticle">
+                <h3>create something...</h3>
+            </div>
             <div class="row">
-                <div class="row darkArticle">
-                    <h2 class="sectionText center">create something...</h2>
+                <div class=" column">
+                    <figure class="gallery">
+                        <a class="frameLink" href="https://www.cafemontmartre.nl" target="webDesigniFrame"><img src="../Portfolio/miki101IMG/101projects/MMtv.jpg" alt="cafeMontmartre"/></a>
+                        <figcaption>
+                            web design for café Montmartre - Amsterdam
+                            <h4><a href="https://www.cafemontmartre.nl" target="_blank">www.cafemontmartre.nl</a></h4>
+                        </figcaption>
+                    </figure>
                 </div>
-                <div class="sectionText">
-                    <h2>web design for café Montmartre de Paris - Amsterdam</h2>
-                    <p>
-                        check <a class="frameLink greyLink" href="https://www.cafemontmartre.nl" target="_blank">www.cafemontmartre.nl</a>
-                                <br>
-                    </p>
+                <div class=" column">
+                    <figure class="gallery">
+                        <a class="frameLink" href="../Portfolio/miki101IMG/101projects/theehuisje/index.html" target="webDesigniFrame"><img src="../Portfolio/miki101IMG/101projects/theehuisje/image/locaties_bg.jpg" alt="theehuisje"/></a>
+                        <figcaption>
+                            assessment for TechGrounds
+                        </figcaption>
+                    </figure>
                 </div>
-                <div class="sectionText">
-
+            </div>
+            <div class="row">
+                <div class=" column">
+                    <figure class="gallery">
+                        <a class="frameLink" href="../Portfolio/miki101IMG/101projects/miki101Sept21/index.html" target="webDesigniFrame"><img src="../Portfolio/miki101IMG/101projects/miki101Sept21/screenShotMiki101.jpg" alt="miki 101 september 2021"/></a>
+                        <figcaption>
+                            design for miki101.nl | sept '21
+                        </figcaption>
+                    </figure>
                 </div>
+                <div class=" column">
+                    <figure class="gallery">
+                        <a class="frameLink" href="https://www.cafepikketanussie.nl" target="webDesigniFrame"><img src="../Portfolio/miki101IMG/101projects/logoPkktnss-backgr.png" alt="logo cafe pikketanussie"/></a>
+                        <figcaption>
+                            work in progress...
+                            <h4><a href="https://www.cafepikketanussie.nl" target="_blank">www.cafepikketanussie.nl</a></h4>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div id="fashion"  class="center sectionText">
+                    fashion &amp; party-wear...<br><br>
+                    <div id="fashionGallery" class=" columnWide hasBackground"></div>
+                </div>
+            </div>
+            <!-- I-FRAME -->
+            <div id="iFrameContainer" class="hasBackground">
+                <img id="iFrameClose" class="lightArticle plainRow" src="../Portfolio/miki101IMG/close-48px.png" alt="close"/>
+                <iframe id="webDesigns" name="webDesigniFrame" title="webdesigns"></iframe>
             </div>
         </article>
         <!-- FOURTH ARTICLE -->
         <article id="skills" class="lightArticle">
+            <div class="title lightArticle plainRow">
+                <h3 class="lightText ">you need some tools &amp; skills</h3>
+            </div>
             <div class="row">
-                <div class="row plainRow">
-                    <h2 class="sectionText center lightText ">you need some tools &amp; skills</h2>
-                </div>
                 <div class="sectionList">
-                    <h2>personality</h2>
+                    <h3>personality</h3>
                     <ul>
                         <li>strong social skills</li>
                         <li>loyal</li>
@@ -153,7 +204,7 @@
                     </ul>
                 </div>
                 <div class="sectionList">
-                    <h2>CPU languages</h2>
+                    <h3>CPU languages</h3>
                     <ul>
                         <li>HTML5</li>
                         <li>CSS3</li>
@@ -165,7 +216,7 @@
                     </ul>
                 </div>
                 <div class="sectionList">
-                    <h2>tools</h2>
+                    <h3>tools</h3>
                     <ul>
                         <li>MS office</li>
                         <li>illustrator</li>
@@ -178,7 +229,7 @@
                     </ul>
                 </div>
                 <div class="sectionList">
-                    <h2>more skills</h2>
+                    <h3>more skills</h3>
                     <ul>
                         <li>staff management</li>
                         <li>event management</li>
@@ -189,7 +240,7 @@
                     </ul>
                 </div>
                 <div class="sectionList">
-                    <h2>languages</h2>
+                    <h3>languages</h3>
                     <ul>
                         <li>Dutch</li>
                         <li>English</li>
@@ -199,29 +250,56 @@
             </div>   
         </article>
         <!-- FIFTH ARTICLE -->
-        <article id="education">
-            <div class="row darkArticle">
-                <h2 class="sectionText center">never stop learning...</h2>
+        <article id="education" class="largeTopMargin">
+            <div class="title darkArticle">
+                <h3>never stop learning...</h3>
             </div>
             <div class="row lightArticle">
-                <div class="sectionText">
+                <div class="sectionText columnWide center">
                     <p> 
-                        <strong>uCertify IT training</strong><br>
-                        Front-end &amp; Back-end development<br>
-                        2020-2021
+                        <strong>TechGrounds</strong><br>
+                        Webdevelopment<br>
+                        2021 - ...
                     </p>
                 </div>
-                <div class="sectionText">
-
+                <div class="sectionText columnWide center">
+                    <p> 
+                        <strong>uCertify IT training</strong><br>
+                        Front- &amp; Backend development (basics)<br>
+                        2020-2021<br>
+                        with degree
+                    </p>
+                </div>
+            </div>
+            <div class="row lightArticle">
+                <div class="sectionText columnWide center">
+                    <p>
+                        <strong>Aquent Gymnasium</strong><br>(online training)<br>
+                        2020-2021<br>
+                        with certificate for:<br><br>
+                        modern webdesign<br>
+                        responsive webdesign<br>
+                        javascript foundations<br>
+                        jQuery building blocks<br>
+                        UX fundamentals<br>
+                    </p>
+                </div>
+                <div class="sectionText columnWide center">
+                    <p> 
+                        <strong>MTS vakschool<br> edelsmeden &amp; fijne techniek</strong><br>
+                        silversmith | clock making<br>
+                        jeweler | gemmology<br>
+                        1994-1997
+                    </p>
                 </div>
             </div>
         </article>
         <!-- SIXTH ARTICLE -->
         <article id="work" class="darkArticle">
+            <div class="title darkArticle">
+                <h3>work, work, work!</h3>
+            </div>
             <div class="row">
-                <div class="row darkArticle">
-                    <h2 class="sectionText center">work, work, work!</h2>
-                </div>
                 <div class="sectionText">
                     <p> 
                         <strong>bartender</strong><br>
@@ -269,7 +347,7 @@
                             <a href="mailto:miki@miki101.nl" target="_blank">miki@miki101.nl</a>
                         </div>
                     </div>
-                    <div class="row plainRow">
+                    <div class="row plainRow sectionText">
                         <div class="icon"><a href="https://www.facebook.com/Mikidesigns" target="_blank"><h2>f</h2></a></div>
                         <div class="icon"><a href="https://github.com/MikiHoffmann" target="_blank"><img src="miki101IMG/gitHubLogo.png" alt="github logo"/></a></div>
                         <div class="icon"><a href="https://www.linkedin.com/in/miki-hoffmann/" target="_blank"><h2>in</h2></a></div>
@@ -278,7 +356,7 @@
                 
             </div>
             <div class="footerBottom row">
-                <div class="footerSection wide">
+                <div class="footerSection columnWide">
                     <p>
                         this website is designed by <a href="#profilePic">miki</a>
                     </p>
@@ -286,7 +364,7 @@
                         amsterdam | 2021
                     </p>
                 </div>
-                <div class="footerSection narrow">
+                <div class="footerSection columnNarrow">
                     <img src="miki101IMG/mikiBlkPnk-500-round.png" alt="miki logo"/>
                 </div>
             </div>

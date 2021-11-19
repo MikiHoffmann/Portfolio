@@ -17,7 +17,7 @@ body {
   width: 100%;
   background-color: #130800;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   color: white;
 }
 
@@ -29,7 +29,7 @@ body {
   background-size: cover;
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48em) {
   .hasBackground {
     background-position: center;
   }
@@ -37,7 +37,7 @@ body {
 
 main {
   width: 100%;
-  margin-top: 4.1rem;
+  margin-top: 4.1em;
 }
 
 img {
@@ -46,12 +46,12 @@ img {
 }
 
 p {
-  margin-bottom: .8rem;
+  margin-bottom: .8em;
 }
 
 h1, h2 {
-  margin-top: .8rem;
-  margin-bottom: .8rem;
+  margin-top: .8em;
+  margin-bottom: .8em;
 }
 
 a {
@@ -67,7 +67,7 @@ li {
 #navBar {
   position: fixed;
   top: 0;
-  height: 4.5rem;
+  height: 4.5em;
   width: 100%;
   -webkit-box-shadow: 3px 3px 6px black;
           box-shadow: 3px 3px 6px black;
@@ -76,9 +76,9 @@ li {
 
 #navBar img {
   position: fixed;
-  top: .5rem;
-  right: .5rem;
-  height: 3.5rem;
+  top: .5em;
+  right: .5em;
+  height: 3.5em;
   width: auto;
   -webkit-box-shadow: 3px 3px 6px black;
           box-shadow: 3px 3px 6px black;
@@ -90,7 +90,7 @@ li {
 #navMobile {
   position: fixed;
   top: 0;
-  height: 4.5rem;
+  height: 4.5em;
   width: 100%;
   background-color: rgba(19, 8, 0, 0.7);
   z-index: 1900;
@@ -105,10 +105,10 @@ li {
 /* MENUBUTTON */
 #menuButton {
   position: fixed;
-  top: .8rem;
-  left: .8rem;
-  height: 3.125rem;
-  width: 3.125rem;
+  top: .8em;
+  left: .8em;
+  height: 3.125em;
+  width: 3.125em;
   background-color: transparent;
   cursor: pointer;
   z-index: 2000;
@@ -225,7 +225,7 @@ li {
   top: 0;
   height: 100%;
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 3em;
   overflow: hidden;
   -webkit-transition: .8s;
   transition: .8s;
@@ -237,14 +237,14 @@ li {
   position: fixed;
   top: 0;
   display: none;
-  height: 4.5rem;
+  height: 4.5em;
   width: 100%;
   padding: 1rem;
   background-color: rgba(19, 8, 0, 0.7);
   z-index: 1010;
 }
 
-@media only screen and (min-width: 30.6rem) {
+@media only screen and (min-width: 30.6em) {
   #navTabletPC {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -261,37 +261,53 @@ li {
 
 #navTabletPC a {
   display: inline-block;
-  font-size: 1.05rem;
-  margin: auto .3rem;
-  padding: .3rem;
+  font-size: 1.05em;
+  margin: auto .3em;
+  padding: .3em;
   -webkit-box-shadow: 3px 3px 6px black;
           box-shadow: 3px 3px 6px black;
 }
 
-@media only screen and (min-width: 33rem) {
+#navTabletPC a:hover {
+  color: #f5bcc5;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-box-shadow: 2px 2px 3px #f5bcc5;
+          box-shadow: 2px 2px 3px #f5bcc5;
+}
+
+@media only screen and (min-width: 34em) {
   #navTabletPC a {
     font-size: 1.2rem;
   }
+}
+
+#navTabletPC a.active {
+  color: #f5bcc5;
 }
 
 /* TO TOP BUTTON */
 #toTopButton {
   display: none;
   position: fixed;
-  bottom: .5rem;
-  left: .5rem;
+  bottom: .5em;
+  left: .5em;
   height: 3em;
-  width: 3rem;
+  width: 3em;
   -webkit-box-shadow: 15px 15px 15px black;
           box-shadow: 15px 15px 15px black;
   z-index: 1600;
   cursor: pointer;
 }
 
-#mainHeader,
-article,
+#toTopButton:hover {
+  -webkit-box-shadow: 2px -2px 3px #f5bcc5, -2px 2px 3px #f5bcc5, -2px -2px 3px #f5bcc5, 2px 2px 3px #f5bcc5, 15px 15px 15px black;
+          box-shadow: 2px -2px 3px #f5bcc5, -2px 2px 3px #f5bcc5, -2px -2px 3px #f5bcc5, 2px 2px 3px #f5bcc5, 15px 15px 15px black;
+}
+
+section,
 #profilePic {
-  scroll-margin-top: 4.5rem;
+  scroll-margin-top: 4.5em;
 }
 
 /* SCROLLBAR */
@@ -313,27 +329,27 @@ article,
 #mainHeader {
   height: auto;
   width: 100%;
-  padding: 2rem;
+  padding: 2em;
   background-color: #f5bcc5;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 4.5vw;
+  font-size: 1.1em;
   color: white;
   text-align: center;
-  letter-spacing: .1rem;
+  letter-spacing: .1em;
   text-shadow: 3px 3px 6px black;
   -webkit-box-shadow: inset 2px -2px 4px black;
           box-shadow: inset 2px -2px 4px black;
 }
 
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 40em) {
   #mainHeader {
-    font-size: 3.5vw;
+    font-size: 1.5em;
   }
 }
 
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 48em) {
   #mainHeader {
-    font-size: 3vw;
+    font-size: 2em;
   }
 }
 
@@ -351,6 +367,11 @@ article,
   border-radius: 50%;
   -webkit-box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
           box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .icon h2 {
@@ -407,8 +428,8 @@ article,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
+  -webkit-column-gap: 1em;
+          column-gap: 1em;
 }
 
 .plainRow {
@@ -422,7 +443,7 @@ article,
   background-color: rgba(19, 8, 0, 0.7);
 }
 
-@media only screen and (min-width: 30.06rem) {
+@media only screen and (min-width: 30.06em) {
   .row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -453,7 +474,7 @@ article,
 
 /* SECTION SHAPES */
 .largeTopMargin {
-  margin-top: 7rem;
+  margin-top: 7em;
 }
 
 .center {
@@ -463,7 +484,7 @@ article,
 
 .title {
   width: 100%;
-  padding: 2rem 3rem;
+  padding: 2em 3em;
   text-align: center;
 }
 
@@ -471,32 +492,32 @@ article,
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
 }
 
 .sectionIMG figure {
   display: block;
   height: auto;
   width: 50%;
-  margin: 2rem auto;
-  padding: 1rem;
+  margin: 2em auto;
+  padding: 1em;
   border: 3px solid white;
   border-radius: 50%;
 }
 
-@media only screen and (min-width: 30.06rem) {
+@media only screen and (min-width: 30.06em) {
   .sectionIMG figure {
     height: auto;
     width: 20%;
-    padding: .7rem;
+    padding: .7em;
   }
 }
 
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 40em) {
   .sectionIMG figure {
     height: auto;
     width: 15%;
-    padding: .7rem;
+    padding: .7em;
   }
 }
 
@@ -506,13 +527,19 @@ article,
           box-shadow: 15px 15px 15px black;
 }
 
+#contact a:hover {
+  color: #130800;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 #projects .row {
-  padding: .5rem 1rem;
+  padding: .5em 1em;
 }
 
 .gallery {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 1em;
+  padding: 1em;
 }
 
 .gallery img {
@@ -521,40 +548,52 @@ article,
 }
 
 .gallery figcaption {
-  padding: .7rem;
+  padding: .7em;
   text-align: center;
 }
 
-@media only screen and (min-width: 45rem) {
+@media only screen and (min-width: 45em) {
   .gallery {
     width: 80%;
     margin: auto;
   }
 }
 
+.gallery:hover {
+  -webkit-box-shadow: 3px 3px 6px #f5bcc5;
+          box-shadow: 3px 3px 6px #f5bcc5;
+}
+
+.gallery figcaption a:hover {
+  color: #130800;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  text-shadow: 2px 2px 3px #f5bcc5;
+}
+
 .sectionList {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   text-align: center;
 }
 
-@media only screen and (min-width: 30.06rem) {
+@media only screen and (min-width: 30.06em) {
   .sectionList {
     -webkit-box-flex: 40%;
         -ms-flex: 40%;
             flex: 40%;
-    padding: 2rem 1rem;
+    padding: 2em 1em;
   }
 }
 
-@media only screen and (min-width: 40rem) {
+@media only screen and (min-width: 40em) {
   .sectionList {
     -webkit-box-flex: 30%;
         -ms-flex: 30%;
             flex: 30%;
-    padding: 2rem 1rem;
+    padding: 2em 1em;
   }
 }
 
@@ -575,10 +614,10 @@ article,
 
 #iFrameClose {
   position: absolute;
-  top: .5rem;
-  left: .5rem;
+  top: .5em;
+  left: .5em;
   height: 3em;
-  width: 3rem;
+  width: 3em;
   -webkit-box-shadow: 15px 15px 15px black;
           box-shadow: 15px 15px 15px black;
   cursor: pointer;
@@ -598,14 +637,14 @@ article,
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 50%;
+  width: 100%;
   margin-bottom: 2em;
 }
 
 #fashionGallery {
   display: block;
-  height: 20rem;
-  width: 17rem;
+  height: 20em;
+  width: 17em;
   margin: auto;
 }
 
@@ -641,6 +680,11 @@ article,
           box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
 }
 
+.icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 .icon h2 {
   position: absolute;
   top: 50%;
@@ -670,14 +714,14 @@ article,
 
 #mainFooter {
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 6em;
   background-color: rgba(19, 8, 0, 0.7);
   color: white;
-  padding: 3rem 0;
-  font-size: .9rem;
+  padding: 3em 0;
+  font-size: .9em;
 }
 
-@media only screen and (min-width: 30.06rem) {
+@media only screen and (min-width: 30.06em) {
   #mainFooter .row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -688,6 +732,12 @@ article,
 
 .footerSection {
   text-align: center;
+}
+
+.footerSection a:hover {
+  color: #130800;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .footerSection .icon {
@@ -701,23 +751,27 @@ article,
 }
 
 .footerBottom {
-  margin-top: .8rem;
+  margin-top: .8em;
 }
 
 .footerBottom p {
-  margin-top: .4rem;
+  margin-top: .4em;
+}
+
+.footerBottom a:hover {
+  text-shadow: -2px -2px 3px #f5bcc5, 2px -2px 3px #f5bcc5, -2px 2px 3px #f5bcc5, 2px 2px 3px #f5bcc5;
 }
 
 .footerBottom img {
   height: auto;
   width: 25%;
-  margin-top: 2rem;
+  margin-top: 2em;
   border-radius: 50%;
   -webkit-box-shadow: 15px 15px 15px black;
           box-shadow: 15px 15px 15px black;
 }
 
-@media only screen and (min-width: 30.06rem) {
+@media only screen and (min-width: 30.06em) {
   .footerBottom img {
     margin-top: 0;
   }
@@ -747,6 +801,11 @@ article,
   border-radius: 50%;
   -webkit-box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
           box-shadow: 3px 3px 6px black, inset 2px -2px 4px black;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .icon h2 {

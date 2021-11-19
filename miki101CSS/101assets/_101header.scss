@@ -1,19 +1,19 @@
 #mainHeader {
     height: auto;
     width: 100%;
-    padding: 2rem;
+    padding: 2em;
     background-color: $backClrLight;
     font-family: $headerFont;
-    font-size: 4.5vw;
+    font-size: 1.1em;
     color: $mainFontClr;
     text-align: center;
-    letter-spacing: .1rem;
+    letter-spacing: .1em;
     text-shadow: $Shdw;
     box-shadow: $ShdwIn;
-    @media only screen and (min-width: 40rem) {
-        font-size: 3.5vw;
+    @media only screen and (min-width: 40em) {
+        font-size: 1.5em;
     }
-    @media only screen and (min-width: 48rem) {
-        font-size: 3vw;
+    @media only screen and (min-width: 48em) {
+        font-size: 2em;
     }
 }

@@ -2,15 +2,15 @@
 #navBar {
     position: fixed;
     top: 0;
-    height: 4.5rem;
+    height: 4.5em;
     width: 100%;
     box-shadow: $Shdw;
     z-index: 1800;
     img {
         position: fixed;
-        top: .5rem;
-        right: .5rem;
-        height: 3.5rem;
+        top: .5em;
+        right: .5em;
+        height: 3.5em;
         width: auto;
         box-shadow: $Shdw;
         border-radius: 50%;
@@ -21,7 +21,7 @@
 #navMobile {
     position: fixed;
     top: 0;
-    height: 4.5rem;
+    height: 4.5em;
     width: 100%;
     background-color: $backClrTrans;
     z-index: 1900;
@@ -32,10 +32,10 @@
 /* MENUBUTTON */
 #menuButton {
     position: fixed;
-    top: .8rem;
-    left: .8rem;
-    height: 3.125rem;
-    width: 3.125rem;
+    top: .8em;
+    left: .8em;
+    height: 3.125em;
+    width: 3.125em;
     background-color: transparent;
     cursor: pointer;
     z-index: 2000;
@@ -123,7 +123,7 @@
     top: 0;
     height: 100%;
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 3em;
     overflow: hidden;
     transition: .8s;
     z-index: 1600;
@@ -133,12 +133,12 @@
     position: fixed;
     top: 0;
     display: none;
-    height: 4.5rem;
+    height: 4.5em;
     width: 100%;
     padding: 1rem;
     background-color: $backClrTrans;
     z-index: 1010;
-    @media only screen and (min-width: 30.6rem) {
+    @media only screen and (min-width: 30.6em) {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -146,30 +146,40 @@
 }
 #navTabletPC a {
     display: inline-block;
-    font-size: 1.05rem;
-    margin: auto .3rem;
-    padding: .3rem;
+    font-size: 1.05em;
+    margin: auto .3em;
+    padding: .3em;
     box-shadow: $Shdw;
-    @media only screen and (min-width: 33rem) {
+    &:hover {
+        color: $backClrLight;
+        transform: scale(1.2);
+        box-shadow: 2px 2px 3px $backClrLight;
+    }
+    @media only screen and (min-width: 34em) {
         font-size: 1.2rem;
     }
+}
+#navTabletPC a.active {
+    color: $backClrLight;
 }
 /* TO TOP BUTTON */
 #toTopButton {
     display: none;
     position: fixed;
-    bottom: .5rem;
-    left: .5rem;
+    bottom: .5em;
+    left: .5em;
     height: 3em;
-    width: 3rem;
+    width: 3em;
     box-shadow: $ShdwWide;
     z-index: 1600;
     cursor: pointer;
+    &:hover {
+        box-shadow: 2px -2px 3px $backClrLight, -2px 2px 3px $backClrLight, -2px -2px 3px $backClrLight, 2px 2px 3px $backClrLight, $ShdwWide;
+    }
 }
-#mainHeader,
-article,
+section,
 #profilePic {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 4.5em;
 }
 /* SCROLLBAR */ 
 ::-webkit-scrollbar {

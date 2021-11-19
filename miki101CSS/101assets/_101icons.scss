@@ -8,6 +8,9 @@
     border: $borderOne;
     border-radius: 50%;
     box-shadow: $Shdw, $ShdwIn;
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 .icon h2 {
     position: absolute;

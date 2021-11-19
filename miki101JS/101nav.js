@@ -17,7 +17,26 @@ $.fn.makeMenuButton = function(button,top,middle,bottom,over,link) {
         $(over).toggleClass('menuOverlay');
     });
 };
-/* TO TOP BUTTON */
+// ACTIVATE MENU BUTTONS
+window.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        // if in view
+        if (entry.intersectionRatio > 0) {
+          document.querySelector(`#navTabletPC a[href="#${id}"]`).classList.add('active');
+          // if out of view
+        } else {
+          document.querySelector(`#navTabletPC a[href="#${id}"]`).classList.remove('active');
+        }
+      });
+    });
+    // Track all section that have an ID
+    document.querySelectorAll('section[id]').forEach((section) => {
+      observer.observe(section);
+    });
+  });
+//TO TOP BUTTON
 $.fn.makeToTopButton = function(button) {
     $(button).hide();
     $(window).scroll(function() {
@@ -32,7 +51,7 @@ $.fn.makeToTopButton = function(button) {
         $(document).scrollTop(0), 'slow';
     });
 };
-//iFrame
+// iFRAME
 $.fn.makeIFrame = (function(link,container,close) {
     // iFrame links
     $(link).on('click', function() {
@@ -42,7 +61,7 @@ $.fn.makeIFrame = (function(link,container,close) {
         $(container).css('height', '0%');
     });
 });
-/* FASHION GALLERY */
+// FASHION GALLERY
 // images
 function $images(id,name) {
     this.id = id;
@@ -58,7 +77,7 @@ $image[4] = new $images("05","orangeSleeve.jpg");
 $image[5] = new $images("06","cancanTorso.png");
 $image[6] = new $images("07","sinterklazenMontmartre.png");
 // template image container
-var $imageTemplate = '<figure class="imageContainer hasBackground"><img src="miki101IMG/101projects/miki101sept21/mikiIMG/pics/\'{{name}}\'"/></figure>';
+var $imageTemplate = '<figure class="imageContainer hasBackground"><img src="../Portfolio/miki101IMG/101projects/gallery/\'{{name}}\'"/></figure>';
 // set images in container
 function setImages() {
     var $imagesContainer = [];
@@ -72,8 +91,8 @@ function setImages() {
     // gallery slides
     var $sliders = $('#fashionGallery');
     $sliders.cycle({
-        fx: 'turnDown',
-        speed: 300,
+        fx: 'fade',
+        speed: 60,
         delay: -4000,
         height: $sliders.height(),
         width: $sliders.width(),

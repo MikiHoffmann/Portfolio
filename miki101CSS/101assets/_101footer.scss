@@ -2,12 +2,12 @@
 @import "./101icons";
 #mainFooter {
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 6em;
     background-color: $backClrTrans;
     color: $mainFontClr;
-    padding: 3rem 0;
-    font-size: .9rem;
-    @media only screen and (min-width: 30.06rem) {
+    padding: 3em 0;
+    font-size: .9em;
+    @media only screen and (min-width: 30.06em) {
         .row {
             flex-direction: row;
         }
@@ -15,27 +15,35 @@
 }
 .footerSection {
     text-align: center;
+    a:hover {
+        color: $darkFontClr;
+        transform: scale(1.1);
+    }
     .icon {
         transform: scale(0.8);
         a {
             font-weight: normal;
             font-size:xx-small;
         }
+        
     }
 }
 .footerBottom {
-    margin-top: .8rem;
+    margin-top: .8em;
     p {
-        margin-top: .4rem;
+        margin-top: .4em;
+    }
+    a:hover {
+        text-shadow: -2px -2px 3px $backClrLight,2px -2px 3px $backClrLight, -2px 2px 3px $backClrLight, 2px 2px 3px $backClrLight;
     }
 }
 .footerBottom img {
     height: auto;
     width: 25%;
-    margin-top: 2rem;
+    margin-top: 2em;
     border-radius: 50%;
     box-shadow: $ShdwWide;
-    @media only screen and (min-width: 30.06rem) {
+    @media only screen and (min-width: 30.06em) {
         margin-top: 0;
     }
     @media only screen and (min-width: 40em) {

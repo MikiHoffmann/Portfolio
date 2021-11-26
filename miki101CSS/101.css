@@ -332,7 +332,6 @@ section,
   padding: 2em;
   background-color: #f5bcc5;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.1em;
   color: white;
   text-align: center;
   letter-spacing: .1em;
@@ -341,16 +340,24 @@ section,
           box-shadow: inset 2px -2px 4px black;
 }
 
+#mainHeader h1 {
+  font-size: 1.5em;
+}
+
 @media only screen and (min-width: 40em) {
-  #mainHeader {
-    font-size: 1.5em;
+  #mainHeader h1 {
+    font-size: 1.75em;
   }
 }
 
 @media only screen and (min-width: 48em) {
-  #mainHeader {
+  #mainHeader h1 {
     font-size: 2em;
   }
+}
+
+#mainHeader h2 {
+  font-size: 1.1em;
 }
 
 /* COLORS */

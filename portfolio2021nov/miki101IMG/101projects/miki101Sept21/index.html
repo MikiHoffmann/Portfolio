@@ -1,0 +1,172 @@
+<!-- miki101 HTML PAGE SETUP-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Miki | designer"/>
+    <meta name="keyword" content="Miki, Miki101, Miki Hoffmann, designer, webdesign, web development"/>
+    <meta name="author" content="Miki Hoffmann"/>
+    <link rel="icon" type="image/x-icon" href="mikiIMG/mikiBlkPnk-50-round.png"/>
+    <link rel="stylesheet" href="mikiCSS/miki101.css"/>
+    <link rel="stylesheet" href="mikiCSS/mikiLogo.css"/>
+    <script src="mikiJS/jquery-3.6.0.js"></script>
+    <script src="mikiJS/miki101.js"></script>
+    <script src="mikiJS/miki101menuButtonlOverlayRight.js"></script>
+    <script src="mikiJS/mikiLogo.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#menuButton').makeMenuButton('#menuButton','#topBeam','#middleBeam','#bottomBeam','#menuOverlay','.linkClose');
+            $('#toTopButton').makeToTopButton('#toTopButton');
+        });
+    </script>
+    <title>me | miki101</title>
+</head>
+ 
+<body onload="grow()">
+    
+<nav>
+    <!-- MOBILE NAVIGATION -->
+    <div id="mobileNavBar">
+        <div id="mobileNav">
+            <div id="menuButton">
+                <div id="topBeam"></div>
+                <div id="middleBeam"></div>
+                <div id="bottomBeam"></div>
+            </div>
+        </div>
+    </div>
+    <!-- MENU OVERLAY -->
+    <div id="menuOverlay" class="menuOverlayClose">
+           <a class="active linkClose" href="index.html">me</a>
+           <a class="linkClose" href="designs.html">designs</a>
+           <a class="linkClose" href="pics.html">pics</a>
+           <a class="linkClose" href="resume.html">resume</a>
+   </div>
+    <!-- PC NAVIGATION -->
+    <div id="pcNavBar">
+        <div id="pcNav">
+            <a class="active" href="index.html">me</a>
+            <a href="designs.html">designs</a>
+            <a href="pics.html">pics</a>
+            <a href="resume.html">resume</a>
+        </div>
+    </div>
+    <!-- TO TOP BUTTON -->
+    <div id="toTopButton">
+        <img src="mikiIMG/arrow-up-48px.png" alt="arrow"/>
+    </div>
+</nav>
+<!-- HEADER -->
+<header>
+    <div id="mobileHeader">
+        <!-- LOGO -->
+        <div id="logoBackgr">
+            <div id="logoBase"></div>
+            <div id="logoBlack">
+                <div id="logoText"></div>
+                <div id="logoPink"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- MAIN PAGE -->
+<main>
+
+<article>
+    <div id="mainSection">
+        <!-- NEW ARTICLE -->
+        <div class="greyLeftArticle">
+
+            <div class="row table">
+
+                <div class="column-5 column-small-5 cell">
+                    <img id="profilePic" class="profilePic" src="mikiIMG/miki2021-7-7.png" alt="miki profile"/>
+                </div>
+
+                <div class="column-7 column-small-7 cell">
+                    <h1>miki | designer</h1>
+                    <p>
+                        Life is to be celebrated.
+                    </p>
+                    <p>
+                    Surround yourself with things that make you happy and assist you.
+                    <br>
+                    Try to enjoy every day and do what you like to do and are good at.
+                    <p>
+                    My two passions are people and good stuff.
+                    <br>
+                    Connecting to people is very important to me.
+                    </p>
+                    <p>
+                    But I also like to surround myself with nice things.
+                    <br>
+                    So design is a big part of my life.
+                    <br>
+                    I try to be unique and don't just follow...
+                    </p>
+                    <p>
+                    A couple of years ago I had to do a step back due to a meningitis infection.
+                    <br>
+                    So I decided to go back to school and learn for webdesign and combine my passions...
+                    </p>
+                    <p>
+                    My keywords for life:
+                    <br>
+                    listen | look | learn | create
+                    <br><br>
+                    &amp; be happy!
+                    </p>
+                </div>
+                
+
+            </div>
+            
+        </div>
+        <!-- NEW ARTICLE -->
+        <div class="blackRightArticle">
+            <h2>contact</h2>
+            <p>
+                <a href="https://api.whatsapp.com/send?phone=+310612273368" target="_blank">06 122 733 68</a>
+            </p>
+            <p>
+                <a href="mailto:miki@miki101.nl" target="_blank">miki@miki101.nl</a>
+            </p>
+            
+        </div>
+    </div>
+</article>
+
+</main>
+<!-- FOOTER -->
+<footer>
+    <div id="footerTotal">
+        <div id="social">
+            <p>
+                follow me on
+                <br>
+                <a href="https://www.facebook.com/Mikidesigns" target="_blank">FACEBOOK</a> or <a href="https://www.instagram.com/miki_hoffmann_designs/" target="_blank">INSTAGRAM</a>
+            </p>
+            <p>
+                let's connect on <a href="https://www.linkedin.com/in/miki-hoffmann/" target="_blank">LINKEDIN</a>
+            </p>
+            <p>
+                or check my coding style &#64; <a href="https://github.com/MikiHoffmann" target="_blank">GitHub</a>
+            </p>
+        </div>
+        <div id="footerBottom">
+            <p>
+                this website is designed by <a href="#profilePic">miki</a>
+            </p>
+            <p>
+                amsterdam | 2021
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

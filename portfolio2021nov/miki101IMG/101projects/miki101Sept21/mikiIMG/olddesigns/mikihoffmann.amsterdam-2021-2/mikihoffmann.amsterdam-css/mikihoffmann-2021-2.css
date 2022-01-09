@@ -1,0 +1,605 @@
+/* LOGO COLORS: RGBA(90,90,90,255)
+                RGBA(0,0,0,255) */
+
+/* BASIC PAGE SETTINGS */
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: rgb(255,255,255);
+}
+body, html {
+    height: 100%;
+    max-width: 1000px;
+    background-color: rgb(0,0,0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: rgb(255,255,255);
+    margin: auto;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media only screen and (max-width:600px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+/* NAVIGATION */
+#navBar {
+    position: fixed;
+    top: .6em;
+    height: 4em;
+    width: 100%;
+    max-width: 1000px;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 950;
+}
+#menuButton {
+    height: 0em;
+    width: 0em;
+    margin-left: .6em;
+    padding-left: .3em;
+    padding-right: .3em;
+    background-color: rgb(0,0,0);
+    animation-name: menuButton;
+    animation-delay: .4s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes menuButton {
+    from {width: 0em; height: 0em;}
+    to {width: 4em; height: 4em;}
+}
+#overlayMenu {
+    height: 100%;
+    position: fixed;
+    top: 0m;
+    left: 0em;
+    background-color: rgb(0,0,0, 0.8);
+    width: 0%;
+    margin-right: .5em;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    z-index: 1000;
+    transition: 0.6s;
+}
+#overlayContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#overlayContent a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255,255,255);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .5em;
+    padding: .3em;
+    height: 4em;
+    width: 4em;
+    transition: 0.3s;
+}
+#overlayContent a:hover:not(.active) {
+    background-color: rgb(90,90,90);
+}
+#overlayContent a.active {
+    background-color: orange;
+}
+/* DISPLAY OVERLAY CONTENT MOBILE LANDSCAPE */
+@media only screen and (max-device-height:400px) {
+    #overlayContent a {
+        display: inline-block;
+    }
+    #languagesContent img {
+        display: inline-block;
+    }
+}
+#toTopButton {
+    width: 0em;
+    display: block;
+    position: fixed;
+    background-color: rgb(90,90,90);
+    box-shadow: 5px 5px 8px rgb(0,0,0);
+    right: .7em;
+    top: 83%;
+    z-index: 900;
+    transition: 0.7s;
+}
+/* HEADER */
+#mainHeader {
+    background-color: rgb(0,0,0);
+    height: 5.2em;
+    width: 100%;
+}
+#headerIcon {
+    float: right;
+    margin-top: 1em;
+    margin-right: 2em;
+    height: 0em;
+    animation-name: headerIcon;
+    animation-delay: .5s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes headerIcon {
+    from {height: 0em;}
+    to {height: 3.5em;}
+}
+#headerLogo {
+    display: block;
+    height: 0em;
+    width: auto;
+    float: right;
+    margin-right: .6em;
+    margin-top: .6em;
+    animation-name: headerLogo;
+    animation-delay: .5s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes headerLogo {
+    from {height: 0em;}
+    to {height: 4em;}
+}
+#mainHeader::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* PARALLAX */
+#aboutMeParallax {
+    background-image: url(../mikihoffmann.amsterdam-images/miki.image/lenteBloesem-600px.png);
+    height: 0em;
+    position: relative;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(255,255,255);
+    animation-name: aboutMeParallax;
+    animation-delay: .6s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes aboutMeParallax {
+    from {height: 0em;}
+    to {height: 9em;}
+}
+#resumeParallax {
+    background-image: url(../mikihoffmann.amsterdam-images/miki.image/paperPile-1000pxFull.png);
+    height: 0em;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(255,255,255);
+    animation-name: resumeParallax;
+    animation-delay: .6s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes resumeParallax {
+    from {height: 0em;}
+    to {height: 9em;}
+}
+#contactParallax {
+    background-image: url(../mikihoffmann.amsterdam-images/miki.image/phoneWall-600px.png);
+    height: 0em;
+    position: relative;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(255,255,255);
+    animation-name: contactParallax;
+    animation-delay: .6s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes contactParallax {
+    from {height: 0em;}
+    to {height: 9em;}
+}
+#portfolioParallax {
+    background-image: url(../mikihoffmann.amsterdam-images/miki.image/IBM-model-m-600px.png);
+    height: 0em;
+    position: relative;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(255,255,255);
+    opacity: 0.8;
+    animation-name: portfolioParallax;
+    animation-delay: .6s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes portfolioParallax {
+    from {height: 0em;}
+    to {height: 9em;}
+}
+#galleryParallax {
+    background-image: url(../mikihoffmann.amsterdam-images/miki.image/camera-600px.png);
+    height: 0em;
+    position: relative;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: rgb(255,255,255);
+    animation-name: galleryParallax;
+    animation-delay: .6s;
+    animation-duration: .8s;
+    animation-fill-mode: forwards;
+}
+@keyframes galleryParallax {
+    from {height: 0em;}
+    to {height: 9em;}
+}
+#headArticle {
+    height: 0em;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    animation-name: headArticle;
+    animation-delay: .6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#headArticle::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@keyframes headArticle {
+    from {height: 0em;}
+    to {height: 5em;}
+}
+#topArticle {
+    height: 0em;
+    width: 100%;
+    background-color: rgb(255,255,255);
+    color: rgb(0,0,0);
+    text-align: center;
+    animation-name: topArticle;
+    animation-delay: .6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#topArticle::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@keyframes topArticle {
+    from {height: 0em;}
+    to {height: 5em;}
+}
+.mainArticle {
+    height: auto;
+}
+.articleImage {
+    width: 0%;
+    height: auto;
+    display: block;
+    margin-top: -3em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 8px 7px 12px rgb(0,0,0);
+    animation-name: aboutMeImage;
+    animation-delay: .6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes aboutMeImage {
+    from {width: 0%;}
+    to {width: 75%;}
+}
+#centreArticle {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-bottom: 2em;
+    color: rgb(255,255,255);
+    overflow: hidden;
+    position: relative;
+    top: 1.5em;
+    left: 0px;
+    opacity: 0;
+    animation-name: centreArticle;
+    animation-delay: .8s;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes centreArticle {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* RESUME */
+#dutchEnglish {
+    display: inline;
+    float: right;
+    margin-top: 0em;
+}
+#resumeNav {
+    padding: 0em;
+}
+#resumeNav li{
+    display: inline-block;
+    list-style-type: none;
+}
+#closeResume {
+    position: sticky;
+    position: -webkit-sticky;
+    top: .3em;
+    float: right;
+    margin-right: .2em;
+    z-index: 1020;
+}
+#school, #work, #personality, #skills, #laptopSkills, #languages {
+    height: 0%;
+    width: 90%;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    background-color: rgb(0,0,0, 0.7);
+    overflow-x: hidden;
+    text-overflow: auto;
+    z-index: 1010;
+    transition: 0.6s;
+}
+#schoolContent, #workContent {
+    position: absolute;
+    top: 5%;
+    padding: 1.5em;
+    width: 100%;
+}
+#personalityContent, #skillsContent, #laptopSkillsContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+}
+#laptopSkillsContent ol, #personalityContent ol, #skillsContent ol {
+    list-style-type: none;
+    padding: 0em;
+    line-height: 2em;
+}
+#languagesContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#languagesContent img {
+    display: block;
+    margin: auto;
+    padding: 0em;
+}
+/* CONTACT */
+#mail, #phone {
+    margin-left: 2em;
+    background-color: rgb(0,0,0);
+}
+#contactInfo {
+    height: 2em;
+}
+#contactInfo::before {
+    content: "";
+}
+#contactInfo::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#mailTo, #phoneMe {
+    display: none;
+}
+/* PORTFOLIO */
+#iFramePage {
+    display: block;
+    position: fixed;
+    top: 0em;
+    left: 0em;
+    width: 0%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.7);
+    transition: 0.7s;
+    z-index: 1020;
+}
+#iFrame {
+    display: block;
+    border: none;
+    border-top: 2px solid rgb(255,255,255);
+    height: 90%;
+    width: 100%;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#closeIFrame {
+    position: absolute;
+    top: 1.1em;
+    right: 1.1em;
+    background-color: transparent;
+    margin-left: 4.5em;
+    z-index: 1020;
+}
+/* GALLERY */
+#pictures {
+    height: 20em;
+    margin-top: 1em;
+    margin-left: 1.5em;
+    margin-bottom: 2em;
+    opacity: 0;
+    animation-name: pictures;
+    animation-delay: .8s;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+@keyframes pictures {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#pictures .animation1 {
+    position: relative;
+    height: 100%;
+    left: 100%;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    opacity: 0;
+    overflow: hidden;
+    transition: .6s ease;
+    animation-name: slideLeft;
+    animation-duration: 5s;
+}
+@keyframes slideLeft {
+    0% {left: 100%; opacity: 0;}
+    50% {left: 0; width: 100%; opacity: 1;}
+    100% {opacity: 0;}
+}
+#pictures .animation2 {
+    position: relative;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    right: 100%;
+    width: 0%;
+    opacity: 0;
+    overflow: hidden;
+    transition: .6s ease;
+    animation-name: slideRight;
+    animation-duration: 5s;
+}
+@keyframes slideRight {
+    0% {right: 100%; opacity: 0;}
+    50% {right: 0; width: 100%; opacity: 1;}
+    100% {opacity: 0;}
+}
+.animation1 img, .animation2 img {
+    height: 20em;
+}
+/* FOOTER */
+footer {
+    opacity: 0;
+    animation-name: footer;
+    animation-delay: .7s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes footer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#footerTop {
+    background-color: rgb(255,255,255);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.footerButton {
+    position: relative;
+    text-align: center;
+    display: block;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+.socialMedia {
+    padding-top: 1.5em;
+    text-align: center;
+    color: rgb(0,0,0);
+}
+.socialMedia a{
+    display: inline-block;
+    line-height: 2em;
+    color: rgb(0,0,0);
+    font-weight: bold;
+}
+#footerBottom {
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+    font-size: .6em;
+}
+/* COLUMN SETTINGS*/
+/* FOR MOBILE */
+[class*=column-] {
+    width: 100%;
+}
+/* FOR TABLET */
+@media only screen and (min-width:600px) {
+    .column-small-1 {width: 8.33%;}
+    .column-small-2 {width: 16.66%;}
+    .column-small-3 {width: 25%;}
+    .column-small-4 {width: 33.33%;}
+    .column-small-5 {width: 41.66%;}
+    .column-small-6 {width: 50%;}
+    .column-small-7 {width: 58.33%;}
+    .column-small-8 {width: 66.66%;}
+    .column-small-9 {width: 75%;}
+    .column-small-10 {width: 83.33%;}
+    .column-small-11 {width: 91.66%;}
+    .column-small-12 {width: 100%;}
+    [class*=column-] {
+        float: left;
+        padding: .1em;
+        border: none;
+    }
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #aboutMeParallax {
+        background-image: url(../mikihoffmann.amsterdam-images/miki.image/lenteBloesem-1000px.png);
+        
+    /*#resumeParallax {
+        background-image: url(../mikihoffmann.amsterdam-images/miki.image/paperPile-1000px.png);
+    }*/
+    #contactParallax {
+        background-image: url(../mikihoffmann.amsterdam-images/miki.image/phoneWall-1000px.png);
+    }
+    #portfolioParallax {
+        background-image: url(../mikihoffmann.amsterdam-images/miki.image/IBM-model-m-1000px.png);
+    }
+    #galleryParallax {
+        background-image: url(../mikihoffmann.amsterdam-images/miki.image/camera-1000px.png);
+    }
+    #languagesContent img {
+        display: inline-block;
+    }
+}
+/* FOR DESKTOP */
+@media only screen and (min-width: 800px) {    
+    .column-1 {width: 8.33%;}
+    .column-2 {width: 16.66%;}
+    .column-3 {width: 25%;}
+    .column-4 {width: 33.33%;}
+    .column-5 {width: 41.66%;}
+    .column-6 {width: 50%;}
+    .column-7 {width: 58.33%;}
+    .column-8 {width: 66.66%;}
+    .column-9 {width: 75%;}
+    .column-10 {width: 83.33%;}
+    .column-11 {width: 91.66%;}
+    .column-12 {width: 100%;}
+}

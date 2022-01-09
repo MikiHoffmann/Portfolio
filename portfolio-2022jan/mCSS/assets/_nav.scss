@@ -1,0 +1,120 @@
+.navBar {
+    position: fixed;
+    top: 0;
+    height: 3em;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1980;
+}
+#navPC {
+     display: none;
+}
+@media only screen and (min-width: 43.5em) {
+    #navMobile {
+        display: none;
+    }
+    #navPC {
+        display: flex;
+        padding: 1em;
+        a {
+            height: 110%;
+            font-size: 1.1em;
+            font-weight: 400;
+            &::after {
+                content: '.';
+            }
+            &:hover {
+                color: var(--myOrange);
+            }
+        }
+        .active {
+            color: var(--myGrey);
+        }
+        @media only screen and (min-width: 59.375em) {
+            padding-top: 2em;
+            padding-left: 3.4em;
+        }
+    }
+}
+.menuButton {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    height: 2em;
+    width: 2.3em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+}
+.menuBeam {
+    position: absolute;
+    left: 0;
+    height: .125em;
+    width: 2.3em;
+    background-color: var(--myGrey);
+    transition: .7s;
+}
+.topMenuBeam {
+    top: 0;
+}
+.middleMenuBeam {
+    top: .8em;
+}
+.bottomMenuBeam {
+    top: 1.6em;
+}
+.topMenuBeamClose {
+    top: .8em;
+    transform: rotate(-135deg);
+    width: 2.5em;
+}
+.middleMenuBeamClose {
+    width: 500%;
+    transform: translateX(3em);
+}
+.bottomMenuBeamClose {
+    top: .8em;
+    transform: rotate(135deg);
+    width: 2.5em;
+}
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    padding: 4.5em 0 0 4.5em;
+    background-color: var(--myBlack);
+    transition: .7s;
+    & .menuLink {
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: 400;
+        text-decoration: none;
+        overflow: hidden;
+        transition: .7s;
+        &:hover {
+            color: var(--myOrange);
+        }
+    }
+    .active {
+        color: var(--myGrey);
+    }
+}
+.menuOverlayHide {
+    height: 0%;
+    opacity: 0;
+    & a {
+        padding: 0;
+    }
+}
+.menuOverlayShow {
+    height: 100%;
+    opacity: 1;
+    & a {
+        padding: .5em 0;
+    }
+}

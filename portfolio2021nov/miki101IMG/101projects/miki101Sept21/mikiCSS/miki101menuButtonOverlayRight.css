@@ -1,0 +1,248 @@
+/*
+MENUBUTTON HTML:
+    <div id="menuButton">
+       <div id="topBeam"></div>
+       <div id="middleBeam"></div>
+       <div id="bottomBeam"></div>
+   </div>
+MENU OVERLAY HTML:
+    <div id="menuOverlay" class="menuOverlayClose">
+       <div id="menuOverlayContent">
+           --- additional content/ links ---
+       </div>
+   </div>
+*/
+:root {
+    --beamclr: rgb(255,255,255); /* color of menu beams */
+    --closeclr: rgb(255,255,255); /* color when close menu */
+    --overlayclr: rgb(63,97,148); /* menu overlay color */
+    --wht: rgb(255,255,255);
+    --blk: rgb(0,0,0);
+    --pnk: rgb(218,84,130);
+    --blue: rgb(63,97,148);
+    --grey: rgb(150,150,150);
+}
+/* menubutton: change ONLY the position! */
+/* mobile */
+#mobileNavBar {
+    position: fixed;
+    top: 0;
+    height: 6.5em;
+    width: auto;
+    background-color: transparent;
+    z-index: 2100;
+}
+@media only screen and (min-width:750px) {
+    #mobileNavBar {
+        display: none;
+    }
+}
+#mobileNav {
+    position: fixed;
+    top: .6em;
+    right: 0;
+    width: 0;
+    height: 5em;
+    background-color: var(--blue);
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+    box-shadow: 1px 1px 3px var(--blk);
+    z-index: 2100;
+    animation-name: mobileNav;
+    animation-delay: .1s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes mobileNav {
+    0% {width: 0;}
+    100% {width: 6em;}
+}
+#menuButton {
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    height: 3.125em;
+    width: 3.125em;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2100;
+}
+.topBeam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--beamclr);
+    transition: .8s;
+    z-index: 2100;
+}
+.middleBeam {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--beamclr);
+    transition: .8s;
+    z-index: 2100;
+}
+.bottomBeam {
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--beamclr);
+    transition: .8s;
+    z-index: 2100;
+}
+.topBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(-45deg);
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--closeclr);
+    transition: .8s;
+    z-index: 2100;
+}
+.middleBeamClose {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: 0;
+    width: 3.125em;
+    background-color: transparent;
+    transition: .8s;
+    z-index: 2100;
+}
+.bottomBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(45deg);
+    height: .625em;
+    width: 3.125em;
+    background-color: var(--closeclr);
+    transition: .8s;
+    z-index: 2100;
+}
+.menuOverlayClose {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    padding-top: 7em;
+    overflow: hidden;
+    transition: .8s;
+    z-index: 2000;
+}
+.menuOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding-top:7em;
+    background-color: var(--overlayclr);
+    overflow: hidden;
+    transition: .8s;
+    z-index: 2000;
+}
+#menuOverlay a {
+    display: block;
+    position: relative;
+    height: auto;
+    margin: 1em 0 1em auto;
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2em;
+    overflow-x: hidden;
+    white-space: nowrap;
+    background-color: var(--blk);
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+    z-index: 2000;
+    transition: .8s;
+}
+@media only screen and (max-device-height:400px) {
+    .menuOverlayClose {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0%;
+        padding-top: 2em;
+        background-color: var(--grey);
+        overflow: hidden;
+        transition: .8s;
+        z-index: 2000;
+    }
+    .menuOverlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        padding-top: 2em;
+        background-color: var(--grey);
+        overflow: hidden;
+        transition: .8s;
+        z-index: 2000;
+    }
+    #menuOverlay a {
+        display: block;
+        position: relative;
+        height: auto;
+        margin: .5em 0 .5em auto;
+        text-decoration: none;
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.1em;
+        overflow-x: hidden;
+        white-space: nowrap;
+        background-color: var(--blk);
+        border-top-left-radius: .5em;
+        border-bottom-left-radius: .5em;
+        z-index: 2000;
+        transition: .8s;
+    }
+}
+.linkClose {
+    position: relative;
+    width: 55%;
+    right: -70%;
+    padding: .5em 0;
+    color: var(--blk);
+    transition: .8s;
+}
+.linkOpen {
+    position: relative;
+    width: 55%;
+    right: 0;
+    padding: .5em;
+    color: white;
+    transition: .8s;
+}
+.active {
+    color: var(--pnk);
+}
+/* TO TOP BUTTON */
+#toTopButton {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: .5em;
+    height: 4em;
+    width: 4em;
+    background-color: var(--pnk);
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    box-shadow: 1px 1px 3px var(--blk);
+    z-index: 1000;
+    cursor: pointer;
+}

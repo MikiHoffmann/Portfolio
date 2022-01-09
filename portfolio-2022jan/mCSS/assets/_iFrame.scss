@@ -1,0 +1,28 @@
+#iFrameContainer {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--myBlackTrans);
+    overflow: hidden;
+    transition: .8s;
+    z-index: 2200;
+}
+#iFrameClose {
+    position: absolute;
+    top: 0;
+    left: .5em;
+    cursor: pointer;
+    z-index: 2300;
+}
+#iFrame {
+    position: relative;
+    display: block;
+    height: 85%;
+    width: 95%;
+    margin: 3em auto auto auto;
+    border: 1px solid var(--myWhite);
+}

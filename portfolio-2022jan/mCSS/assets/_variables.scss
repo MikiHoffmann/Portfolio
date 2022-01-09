@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Work Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,400;0,700;0,900;1,100&display=swap');
+    font-weight: 100 900;
+}
+/* COLORS */
+:root {
+    --myBlack: rgb(3, 0, 12);
+    --myBlackTrans: rgba(3, 0, 12,0.7);
+    --myGrey: rgb(111, 110, 116);
+    --myWhite: rgb(255,255,230);
+    --myRed: rgb(230, 53, 53);
+    --myOrange: rgb(233, 123, 33);
+}
+.centerText {
+    text-align: center;
+}
+.justifyText {
+    text-align: justify;
+}
+.greyText {
+    color: var(--myGrey);
+}
+.redText {
+    color: var(--myRed);
+}
+.orangeText {
+    color: var(--myOrange);
+}
+.mediumText {
+    font-size: 1.5em;
+}
+.largeText {
+    font-size: 1.8em;
+    line-height: 85%;
+}

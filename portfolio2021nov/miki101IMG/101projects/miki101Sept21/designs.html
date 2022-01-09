@@ -1,0 +1,248 @@
+<!-- miki101 HTML PAGE SETUP-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Miki | designer"/>
+    <meta name="keyword" content="Miki, Miki101, Miki Hoffmann, designer, webdesign, web development"/>
+    <meta name="author" content="Miki Hoffmann"/>
+    <link rel="icon" type="image/x-icon" href="mikiIMG/mikiBlkPnk-50-round.png"/>
+    <link rel="stylesheet" href="mikiCSS/miki101.css"/>
+    <link rel="stylesheet" href="mikiCSS/mikiLogo.css"/>
+    <link rel="stylesheet" href="mikiCSS/sphereOne.css"/>
+    <script src="mikiJS/jquery-3.6.0.js"></script>
+    <script src="mikiJS/miki101.js"></script>
+    <script src="mikiJS/miki101menuButtonlOverlayRight.js"></script>
+    <script src="mikiJS/mikiLogo.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#menuButton').makeMenuButton('#menuButton','#topBeam','#middleBeam','#bottomBeam','#menuOverlay','.linkClose');
+            $('#toTopButton').makeToTopButton('#toTopButton');
+            $('#iFrameContainer').makeIFrame('.frameLink','#iFrameContainer','#iFrameClose');
+        });
+    </script>
+    <title>designs | miki101</title>
+</head>
+ 
+<body onload="grow()">
+    
+<nav>
+    <!-- MOBILE NAVIGATION -->
+    <div id="mobileNavBar">
+        <div id="mobileNav">
+            <div id="menuButton">
+                <div id="topBeam"></div>
+                <div id="middleBeam"></div>
+                <div id="bottomBeam"></div>
+            </div>
+        </div>
+    </div>
+    <!-- MENU OVERLAY -->
+    <div id="menuOverlay" class="menuOverlayClose">
+           <a class="linkClose" href="index.html">me</a>
+           <a class="active linkClose" href="designs.html">designs</a>
+           <a class="linkClose" href="pics.html">pics</a>
+           <a class="linkClose" href="resume.html">resume</a>
+   </div>
+    <!-- PC NAVIGATION -->
+    <div id="pcNavBar">
+        <div id="pcNav">
+            <a href="index.html">me</a>
+            <a class="active" href="designs.html">designs</a>
+            <a href="pics.html">pics</a>
+            <a href="resume.html">resume</a>
+        </div>
+    </div>
+    <!-- TO TOP BUTTON -->
+    <div id="toTopButton">
+        <img src="mikiIMG/arrow-up-48px.png" alt="arrow"/>
+    </div>
+</nav>
+<!-- HEADER -->
+<header>
+    <div id="mobileHeader">
+        <!-- LOGO -->
+        <div id="logoBackgr">
+            <div id="logoBase"></div>
+            <div id="logoBlack">
+                <div id="logoText"></div>
+                <div id="logoPink"></div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- MAIN PAGE -->
+<main>
+
+<article>
+    <div id="mainSection">
+        <!-- NEW ARTICLE -->
+        <div class="greyLeftArticle">
+
+            <div class="row table">
+            
+                <div class="column-5 column-small-5 cell">
+                    <img class="profilePic" src="mikiIMG/coding.png" alt="coding"/>
+                </div>
+
+                <div class="column-7 column-small-7 cell">
+                    <h2>designs</h2>
+                    <p>
+                        As I said, design is a big part of my life.
+                        <br>
+                        I started with jewellery and silverware.
+                        <br>
+                        Later my focus shifted towards fashion to express my ideas.
+                        <br>
+                    </p>
+                    <p>
+                        Our digital world is growing in a fast rate and I always have been interested in the workings of websites, 
+                        so a few years ago I decided to learn how to code.
+                        <br>
+                        The basics are there, so now I'm ready for the next step.
+                        <br>
+                        The world of UI and UX...
+                    </p>
+                    <p>
+                        <br><br>
+                        Check my coding style &#64; <a href="https://github.com/MikiHoffmann" target="_blank">GitHub</a>
+                    </p>
+                    <p>
+                        <br><br>
+                        work in progress on two other websites,
+                        <br>
+                        stay tuned!
+                    </p>
+                </div>
+
+            </div>
+            
+        </div>
+        <!-- NEW ARTICLE -->
+        <div class="blackRightArticle">
+            <div class="row">
+                <div class="column-8 column-small-8">
+                    <h2>assessment for TechGrounds</h2>
+                    <p>
+                        The case:
+                        <br>
+                        the participants got a picture of a webpage about a "Theehuisje".
+                        <br>
+                        We had to recreate that page with some features like links, and parallax scrolling...
+                    </p>
+                    <p>
+                        check <a class="frameLink greyLink" href="mikiIMG/TechGrounds/index.html" target="webDesigniFrame">here</a> for my result.
+                                <br>
+                    </p>
+                </div>
+                <div class="column-4 column-small-4">
+                    <img src="mikiIMG/TechGrounds/image/icon.png" height="80" width="80" alt="theehuisje logo"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-8 column-small-8">
+                    <h2>web design for café Montmartre de Paris - Amsterdam</h2>
+                    <p>
+                        check <a class="frameLink greyLink" href="https://www.cafemontmartre.nl" target="_blank">www.cafemontmartre.nl</a>
+                                <br>
+                    </p>
+                </div>
+                <div class="column-4 column-small-4">
+                    <img src="mikiIMG/montmartre-M-pnk-100-transparant.png" height="80" width="80" alt="montmartre logo"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-8 column-small-8">
+                    <h2>older designs of my site</h2>
+                    <p>
+                        check the <a class="frameLink greyLink" href="mikiIMG/olddesigns/mikihoffmann.amsterdam-white-2021-2/homewhite.html" target="webDesigniFrame">white design</a>
+                        <br><br>
+                        check the <a class="frameLink greyLink" href="mikiIMG/olddesigns/mikihoffmann.amsterdam-2021-2/homeblack.html" target="webDesigniFrame">black design</a>
+                    </p>
+                    <p>
+                        (the homepages displayed...)
+                    </p>
+                </div>
+                <div class="column-4 column-small-4">
+                    <img src="mikiIMG/coding-menu.png" height="80" width="80" alt="coded menu"/>
+                </div>
+            </div>
+        </div>
+        <!-- I-FRAME -->
+        <div id="iFrameContainer">
+            <img id="iFrameClose" src="mikiIMG/close-48px.png" alt="close"/>
+            <iframe id="webDesigns" name="webDesigniFrame" title="webdesigns"></iframe>
+        </div>
+        
+        <!-- NEW ARTICLE -->
+        
+            <div class="greyLeftArticle">
+                <h2>CSS</h2>
+                <p class="whtText">
+                    a simple CSS animation,
+                    <br>
+                    feels like an old 'Atari' game...
+                </p>
+                <div id="animationContainer">
+                    <div id="sphereOneContainer">
+                        <div id="sphereOne"></div>
+                    </div>
+                </div>
+            </div>
+            
+                
+            
+        
+        <!-- NEW ARTICLE -->
+        <div class="blueRightArticle">
+            <h2>some fashion designs</h2>
+            <div class="row">
+                <div class="column-6 column-small-6">
+                    <img class="picsIMG" src="mikiIMG/fashiondesigns/Coat spring 2016-wool-cordoroy-furr.png" alt="cordoroy"/>
+                    <img class="picsIMG" src="mikiIMG/fashiondesigns/Fucsia-Blue - shirtandtrousers.png" alt="shirt and trousers"/>
+                </div>
+                <div class="column-6 column-small-6">
+                    <img class="picsIMG" src="mikiIMG/fashiondesigns/patroon-tafel.png" alt="pattern drawing"/>
+                    <img class="picsIMG" src="mikiIMG/fashiondesigns/purple-hoodie.jpg" alt="purple hoodie"/>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</article>
+
+</main>
+<!-- FOOTER -->
+<footer>
+    <div id="footerTotal">
+        <div id="social">
+            <p>
+                follow me on
+                <br>
+                <a href="https://www.facebook.com/Mikidesigns" target="_blank">FACEBOOK</a> or <a href="https://www.instagram.com/miki_hoffmann_designs/" target="_blank">INSTAGRAM</a>
+            </p>
+            <p>
+                let's connect on <a href="https://www.linkedin.com/in/miki-hoffmann/" target="_blank">LINKEDIN</a>
+            </p>
+            <p>
+                or check my coding style &#64; <a href="https://github.com/MikiHoffmann" target="_blank">GitHub</a>
+            </p>
+        </div>
+        <div id="footerBottom">
+            <p>
+                this website is designed by <a href="index.html#profilePic">miki</a>
+            </p>
+            <p>
+                amsterdam | 2021
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

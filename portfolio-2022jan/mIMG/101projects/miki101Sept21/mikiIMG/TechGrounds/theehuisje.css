@@ -1,0 +1,365 @@
+/* STYLESHEET THEEHUISJE */
+/* MAIN SETTINGS */
+html {
+    scroll-behavior: smooth;
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    background-color: rgb(0,0,0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: rgb(255,255,255);
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(141, 85, 13);
+}
+h1 {
+    margin: 0 0 1em 0;
+}
+p {
+    margin: 0;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+::-webkit-scrollbar {
+    color: rgb(0,0,0,0.7);
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(255,255,255);
+    box-shadow: inset 2px -2px 6px rgb(0,0,0);
+    border-left: 1px solid rgb(255,255,255);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0,0,0,0.6);
+    box-shadow: 2px 2px 6px rgb(0,0,0);
+    border-left: 1px solid rgb(255,255,255);
+}
+::-webkit-scrollbar-button {
+    background-color: rgb(0,0,0);
+    border-left: 1px solid rgb(255,255,255);
+}
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* HEADER */
+#mainHeader {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 4em;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    border-bottom: 1px solid rgb(255,255,255);
+    z-index: 1800;
+}
+#topLogo img {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4em;
+    width: auto;
+    z-index: 2000;
+}
+/* MOBILE NAV */
+#topMenuMobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: block;
+    height: 4em;
+    width: fit-content;
+    z-index: 1800;
+}
+#menuButton {
+    position: fixed;
+    top: .5em;
+    right: .5em;
+    height: 3.125em;
+    width: 3.125em;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 2000;
+}
+.topBeam {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    transition: .8s;
+}
+.middleBeam {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    transition: .8s;
+}
+.bottomBeam {
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    height: .625em;
+    width: 3.125em;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    transition: .8s;
+}
+.topBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(-45deg);
+    height: .625em;
+    width: 3.125em;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    transition: .8s;
+}
+.middleBeamClose {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    height: 0;
+    width: 3.125em;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: .8s;
+}
+.bottomBeamClose {
+    position: absolute;
+    top:43%;
+    left: 5%;
+    transform: rotate(45deg);
+    height: .625em;
+    width: 3.125em;
+    background-color: rgb(255,255,255);
+    border-radius: 5px;
+    transition: .8s;
+}
+.overlayClose {
+    position: fixed;
+    top: 4em;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    border-bottom: 1PX solid rgb(255,255,255);
+    transition: .8s;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1800;
+}
+.overlay {
+    position: fixed;
+    top: 4em;
+    left: 0;
+    height: 10em;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    border-bottom: 1PX solid rgb(255,255,255);
+    overflow: hidden;
+    transition: .8s;
+    text-align: center;
+    z-index: 1800;
+}
+#overlay a {
+    display: block;
+    font-size: 1.4em;
+    margin: .3em;
+    padding-top: .4em;
+}
+/* PC NAV */
+#topMenu {
+    display: none;
+}
+/* MAIN SECTION */
+#topParallax {
+    background-image: url(image/thee_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    height: 100%;
+    width: auto;
+    padding: 12em 0;
+    margin-bottom: 3em;
+}
+#missie {
+    display: block;
+    margin: 3em auto;
+    padding: .5em 0;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(0,0,0,0.6);
+    scroll-margin-top: 5em;
+}
+#soorten {
+    background-color: transparent;
+    height: auto;
+    width: 100%;
+    margin: 3em auto;
+    text-align: center;
+    scroll-margin-top: 5em;
+}
+#soortenImg {
+    height: auto;
+    width: 80%;
+    margin: 3em auto;
+}
+.theeSoort {
+    margin: 1em;
+}
+.theeSoort figcaption {
+    text-align: center;
+}
+#bottomParallax {
+    background-image: url(image/locaties_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    height: 100%;
+    width: auto;
+    padding: 8em 0;
+}
+#locaties {
+    width: 100%;
+    margin: auto;
+    scroll-margin-top: 5em;
+}
+.locatieText {
+    text-align: center;
+    margin: 1em .5em;
+    padding: .6em 0;
+    background-color: rgb(0,0,0,0.6);
+}
+.locatieText li {
+    padding: .3em;
+    list-style-type: none;
+}
+@media only sreen and (min-width: 800px) {
+    #locaties {
+        width: 80%;
+    }
+}
+/* FOOTER */
+#mainFooter {
+    padding: .5em 0;
+    text-align: center;
+    border-top: 1px solid rgb(255,255,255);
+}
+.footerText {
+    font-size: .75em;
+    line-height: 2em;
+}
+/* 12 COLUMN VIEW */
+/* FOR MOBILE */
+[class*="column-"] {
+    width: 100%;
+}
+/* FOR TABLET */
+@media only screen and (min-width: 600px) {
+    .column-small-1 {width: 8.33%;}
+    .column-small-2 {width: 16.66%;}
+    .column-small-3 {width: 25%;}
+    .column-small-4 {width: 33.33%;}
+    .column-small-5 {width: 41.66%;}
+    .column-small-6 {width: 50%;}
+    .column-small-7 {width: 58.33%;}
+    .column-small-8 {width: 66.66%;}
+    .column-small-9 {width: 75%;}
+    .column-small-10 {width: 83.33%;}
+    .column-small-11 {width: 91.66%;}
+    .column-small-12 {width: 100%;}
+    [class*=column-] {
+        float: left;
+    }
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* HEADER */
+    #mainHeader {
+        height: 2.5em;
+    }
+    #topLogo img{
+        height: 2.5em;
+        width: auto;
+    }
+    /* NAV */
+    #topMenuMobile {
+        display: none;
+    }
+    #topMenu {
+        display: block;
+        position: fixed;
+        width: fit-content;
+        top: 0;
+        right: 0;
+        z-index: 1900;
+    }
+    #topMenu a {
+        display: inline-block;
+        margin: .6em .4em;
+        font-family:'Times New Roman', Times, serif;
+    }
+    /* MAIN SECTION */
+    #topParallax {
+        background-size: contain;
+    }
+    #missie {
+        scroll-margin-top: 3em;
+        width: 90%;
+        padding: .5em;
+    }
+    #soorten {
+        scroll-margin-top: 3em;
+        width: 80%;
+    }
+    #locaties {
+        width: 100%;
+        scroll-margin-top: 3em;
+    }
+}
+/* FOR DESCTOP */
+@media only screen and (min-width: 768px) {    
+    .column-1 {width: 8.33%;}
+    .column-2 {width: 16.66%;}
+    .column-3 {width: 25%;}
+    .column-4 {width: 33.33%;}
+    .column-5 {width: 41.66%;}
+    .column-6 {width: 50%;}
+    .column-7 {width: 58.33%;}
+    .column-8 {width: 66.66%;}
+    .column-9 {width: 75%;}
+    .column-10 {width: 83.33%;}
+    .column-11 {width: 91.66%;}
+    .column-12 {width: 100%;}
+    /* MAIN SECTION */
+    #locaties {
+        width: 90%;
+    }
+}

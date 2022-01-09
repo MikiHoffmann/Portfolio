@@ -1,0 +1,187 @@
+<!-- INDEX PAGE HET THEEHUISJE -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="theehuisje.css"/>
+    <link rel="icon" type="image/x-icon" href="image/icon.png"/>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="theehuisje.js"></script>
+    <title>theehuisje</title>
+</head>
+ 
+<body>
+
+    <header>
+        <!-- MAIN HEADER -->
+        <div id="mainHeader">
+            <div id="topLogo">
+                <a href="index.html"><img src="image/logo.png" alt="logo theehuisje"/></a>
+            </div>        
+        </div>
+    </header>
+    
+    <nav>
+        <!-- MOBILE MENU -->
+        <div id="topMenuMobile">
+            <div id="menuButton" onclick="openOverlay()">
+                <div id="topBeam" class="topBeam"></div>
+                <div id="middleBeam" class="middleBeam"></div>
+                <div id="bottomBeam" class="bottomBeam"></div>
+            </div>
+            <div id="overlay" class="overlayClose">
+                <a href="#missie" onclick="openOverlay()">Missie</a>
+                <a href="#soorten" onclick="openOverlay()">Onze thee</a>
+                <a href="#locaties" onclick="openOverlay()">Locaties</a>
+            </div>
+            
+        </div>
+        <!-- MENU PC -->
+        <div id="topMenu">
+            <a href="#missie">Missie</a>
+            <a href="#soorten">Onze thee</a>
+            <a href="#locaties">Locaties</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <article>
+            <!-- TOP PARALLAX -->
+            <div id="topParallax">
+                <div id="missie">
+                    <h1>Onze missie</h1>
+                    <p>
+                        Handgeplukt, Ambachtelijk samengesteld, Biologisch, Duurzaam, Kleinschalig, Fair Trade
+                    </p>
+                </div>
+            </div>
+            <!-- MIDDLE SECTION -->
+            <div id="soorten">
+                <h1>Thee van de maand</h1>
+                <p>
+                    Een overzicht van onze populairste theesoorten
+                </p>
+            </div>
+            <div id="soortenImg">
+                <!-- THEE IMAGES -->
+                <div class="row">
+                    <div class="column-4 column-small-6">
+                        <figure class="theeSoort">
+                            <img src="image/gember_thee.jpg" alt="gember thee"/>
+                            <figcaption>
+                                Gember thee
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="column-4 column-small-6">
+                        <figure class="theeSoort">
+                            <img src="image/groene_thee.jpg" alt="groene thee"/>
+                            <figcaption>
+                                Groene thee
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="column-4 column-small-6">
+                        <figure class="theeSoort">
+                            <img src="image/kamille_thee.jpg" alt="kamille thee"/>
+                            <figcaption>
+                                Kamille thee
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="column-4 column-small-6">
+                        <figure class="theeSoort">
+                            <img src="image/munt_thee.jpg" alt="munt thee"/>
+                            <figcaption>
+                                Munt thee
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="column-4 column-small-6">
+                        <figure class="theeSoort">
+                            <img src="image/zwarte_thee.jpg" alt="zwarte thee"/>
+                            <figcaption>
+                                Zwarte thee
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="column-4 column-small-6">
+                        <figure class="theeSoort">
+                            <img src="image/gember_thee.jpg" alt="gember thee"/>
+                            <figcaption>
+                                Gember thee
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <!-- LOWER PARALLAX -->
+            <div id="bottomParallax">
+                <div id="locaties">
+                    <h1 class="locatieText">Locaties</h1>
+                    <!-- LOCATIES CARDS -->
+                    <div class="row">
+                        <div class="column-4 column-small-4">
+                            <ul class="locatieText">
+                                <li><strong>Amsterdam</strong></li>
+                                <li>Het Theehuisje Amsterdam</li>
+                                <li>Osdorpplein 16</li>
+                                <li>1064 BG Amsterdam</li>
+                            </ul>
+                        </div>
+                        <div class="column-4 column-small-4">
+                            <ul class="locatieText">
+                                <li><strong>Utrecht</strong></li>
+                                <li>Het Theehuisje Utrecht</li>
+                                <li>Javaplantsoen 167</li>
+                                <li>2478 DE Utrecht</li>
+                            </ul>
+                        </div>
+                        <div class="column-4 column-small-4">
+                            <ul class="locatieText">
+                                <li><strong>Rotterdam</strong></li>
+                                <li>Het Theehuisje Rotterdam</li>
+                                <li>Orlandostraat 233</li>
+                                <li>2594 HW Rotterdam</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        
+    </main>
+
+    <footer>
+        <!-- MAIN FOOTER -->
+        <div id="mainFooter">
+            <div class="row">
+                <div class="column-3 column-small-6 footerText">
+                    <p>
+                        Copyright Het Theehuisje &copy; 2020
+                    </p>
+                </div>
+                <div class="column-3 column-small-6 footerText">
+                    <p>
+                        <a href="index.html">Het Theehuisje</a>
+                    </p>
+                </div>
+                <div class="column-3 column-small-6 footerText">
+                    <p>
+                        <a href="mailto:contact@hettheehuisje.nl">contact@hettheehuisje.nl</a>
+                    </p>
+                </div>
+                <div class="column-3 column-small-6 footerText">
+                    Telefoon: 020-2545669
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
